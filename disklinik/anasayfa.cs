@@ -40,5 +40,12 @@ namespace disklinik
             altpanel.Width = button1.Width;
             altpanel.Top = button1.Top;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+
+        }
     }
 }
