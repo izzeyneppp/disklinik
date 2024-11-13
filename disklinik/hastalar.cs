@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
+using System.Collections;
 
 namespace disklinik
 {
@@ -21,5 +23,18 @@ namespace disklinik
             baglanti.Close();
         }
 
+        public DataSet Showhasta(string query)
+        {
+            ConnectionString MyConnection = new ConnectionString();
+            SqlConnection baglanti = MyConnection.GetCon();
+            SqlCommand komut = new SqlCommand();
+            komut.Connection = baglanti;
+            komut.CommandText = query;
+            SqlDataAdapter sda = new SqlDataAdapter(komut);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            return ds;
+
+        }
     }
 }

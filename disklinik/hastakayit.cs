@@ -12,6 +12,8 @@ namespace disklinik
 {
     public partial class hastakayit : Form
     {
+        private object hastadata;
+
         public hastakayit()
         {
             InitializeComponent();
@@ -24,25 +26,58 @@ namespace disklinik
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string query = "insert into hastakayit values('" + hastaadsoyad.Text + "','" + telefonhk.Text + "','" + adreshk.Text + "','" + doğumtarihihk.Value.Date + "','" + cinsiyethk.SelectedItem.ToString() + "','" + alerjihk.Text + "',)";
-            hastalar hst = new hastalar();  
+            string query = "INSERT INTO hastakayit (hasta_adi, hasta_telefon,hasta_adres,hasta_dg,hasta_cinsiyet,hasta_alerji) " +
+                        "VALUES ('" + hastaadsoyad.Text + "', '" + telefonhk.Text + "', '" + adreshk.Text + "', '" +
+                        doğumtarihihk.Text + "', '" + cinsiyethk.SelectedItem.ToString() + "', '" + alerjihk.Text + "')";
+            hastalar hst = new hastalar();
 
             try
             {
                 hst.hasta_ekle(query);
-                MessageBox.Show("Hasta Başarıyla Eklendi"); 
+                MessageBox.Show("HASTA BAŞARIYLA EKLENDİ");
 
-            }catch(Exception Ex)
+            }
+            catch (Exception)
             {
-                MessageBox.Show(Ex.Message);
+                hst.hasta_ekle(query);
+                MessageBox.Show("Hasta başarıyla eklendi.");
+                yenile();
+
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           this.Close();
             Application.Exit();
+        }
 
+        public void yenile()
+        {
+            hastalar hst = new hastalar();
+            string query = "select * from hastakayit";
+            DataSet ds = hst.Showhasta(query);
+            hastadata.DataSource = ds.Tables[0];
+            hastaadsoyad.Text = "";
+            telefonhk.Text = "";
+            cinsiyethk.Text = "";
+            alerjihk.Text = "";
+            adreshk.Text = "";
+
+
+        }
+
+        private void hastakayit_Load(object sender, EventArgs e)
+        {
+            yenile();
+
+
+        }
+
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            yenile();
         }
     }
 }
+

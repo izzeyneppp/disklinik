@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hastakayit));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.telefonhk = new System.Windows.Forms.TextBox();
@@ -59,11 +61,29 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(322, 153);
+            this.dataGridView1.Location = new System.Drawing.Point(429, 188);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(409, 210);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 258);
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -71,53 +91,57 @@
             // 
             this.telefonhk.BackColor = System.Drawing.Color.White;
             this.telefonhk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.telefonhk.Location = new System.Drawing.Point(153, 188);
+            this.telefonhk.Location = new System.Drawing.Point(204, 231);
+            this.telefonhk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.telefonhk.Name = "telefonhk";
-            this.telefonhk.Size = new System.Drawing.Size(150, 20);
+            this.telefonhk.Size = new System.Drawing.Size(199, 22);
             this.telefonhk.TabIndex = 49;
             // 
             // alerjihk
             // 
             this.alerjihk.BackColor = System.Drawing.Color.White;
             this.alerjihk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.alerjihk.Location = new System.Drawing.Point(153, 306);
+            this.alerjihk.Location = new System.Drawing.Point(204, 377);
+            this.alerjihk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.alerjihk.Name = "alerjihk";
-            this.alerjihk.Size = new System.Drawing.Size(150, 20);
+            this.alerjihk.Size = new System.Drawing.Size(199, 22);
             this.alerjihk.TabIndex = 47;
             // 
             // adreshk
             // 
             this.adreshk.BackColor = System.Drawing.Color.White;
             this.adreshk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adreshk.Location = new System.Drawing.Point(153, 344);
+            this.adreshk.Location = new System.Drawing.Point(204, 423);
+            this.adreshk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.adreshk.Name = "adreshk";
-            this.adreshk.Size = new System.Drawing.Size(150, 20);
+            this.adreshk.Size = new System.Drawing.Size(199, 22);
             this.adreshk.TabIndex = 46;
             // 
             // doğumtarihihk
             // 
-            this.doğumtarihihk.Location = new System.Drawing.Point(153, 228);
+            this.doğumtarihihk.Location = new System.Drawing.Point(204, 281);
+            this.doğumtarihihk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.doğumtarihihk.Name = "doğumtarihihk";
-            this.doğumtarihihk.Size = new System.Drawing.Size(150, 20);
+            this.doğumtarihihk.Size = new System.Drawing.Size(199, 22);
             this.doğumtarihihk.TabIndex = 45;
             // 
             // hastaadsoyad
             // 
             this.hastaadsoyad.BackColor = System.Drawing.Color.White;
             this.hastaadsoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hastaadsoyad.Location = new System.Drawing.Point(153, 150);
+            this.hastaadsoyad.Location = new System.Drawing.Point(204, 185);
+            this.hastaadsoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hastaadsoyad.Name = "hastaadsoyad";
-            this.hastaadsoyad.Size = new System.Drawing.Size(150, 20);
+            this.hastaadsoyad.Size = new System.Drawing.Size(199, 22);
             this.hastaadsoyad.TabIndex = 44;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(74, 303);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(99, 373);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 21);
+            this.label7.Size = new System.Drawing.Size(74, 25);
             this.label7.TabIndex = 43;
             this.label7.Text = "Alerji :";
             // 
@@ -125,10 +149,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(70, 342);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(93, 421);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 21);
+            this.label6.Size = new System.Drawing.Size(78, 25);
             this.label6.TabIndex = 42;
             this.label6.Text = "Adres :";
             // 
@@ -136,10 +159,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(49, 264);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(65, 325);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 21);
+            this.label5.Size = new System.Drawing.Size(99, 25);
             this.label5.TabIndex = 41;
             this.label5.Text = "Cinsiyet :";
             // 
@@ -147,10 +169,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(-3, 225);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(-4, 277);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 21);
+            this.label4.Size = new System.Drawing.Size(151, 25);
             this.label4.TabIndex = 40;
             this.label4.Text = "Doğum Tarihi :";
             // 
@@ -158,10 +179,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(55, 186);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(73, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 21);
+            this.label3.Size = new System.Drawing.Size(93, 25);
             this.label3.TabIndex = 39;
             this.label3.Text = "Telefon :";
             // 
@@ -169,19 +189,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(35, 147);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(47, 181);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 21);
+            this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 38;
             this.label2.Text = "Ad Soyad :";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(726, 3);
+            this.button1.Location = new System.Drawing.Point(968, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(21, 24);
+            this.button1.Size = new System.Drawing.Size(28, 30);
             this.button1.TabIndex = 29;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -192,10 +212,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(202, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(269, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 29);
+            this.label1.Size = new System.Drawing.Size(522, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "DENTALAİD HASTA KAYIT SİSTEMİ";
             // 
@@ -208,18 +227,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(752, 89);
+            this.panel1.Size = new System.Drawing.Size(1003, 110);
             this.panel1.TabIndex = 36;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::disklinik.Properties.Resources.VUSLAT_DENTAL__2_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 89);
+            this.pictureBox1.Size = new System.Drawing.Size(155, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -229,10 +248,10 @@
             this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(538, 110);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(717, 135);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 37);
+            this.button2.Size = new System.Drawing.Size(83, 46);
             this.button2.TabIndex = 51;
             this.button2.Text = "ARA";
             this.button2.UseVisualStyleBackColor = false;
@@ -240,10 +259,10 @@
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(360, 121);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Location = new System.Drawing.Point(480, 149);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(143, 20);
+            this.textBox6.Size = new System.Drawing.Size(190, 22);
             this.textBox6.TabIndex = 52;
             // 
             // button3
@@ -251,22 +270,23 @@
             this.button3.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(634, 110);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(845, 135);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 37);
+            this.button3.Size = new System.Drawing.Size(112, 46);
             this.button3.TabIndex = 53;
-            this.button3.Text = "SİL";
+            this.button3.Text = "YENİLE\r\n";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button4.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(23, 411);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(31, 506);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 37);
+            this.button4.Size = new System.Drawing.Size(112, 46);
             this.button4.TabIndex = 54;
             this.button4.Text = "KAYDET";
             this.button4.UseVisualStyleBackColor = false;
@@ -276,10 +296,10 @@
             // 
             this.button5.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button5.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(151, 411);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Location = new System.Drawing.Point(201, 506);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 37);
+            this.button5.Size = new System.Drawing.Size(112, 46);
             this.button5.TabIndex = 55;
             this.button5.Text = "DÜZENLE";
             this.button5.UseVisualStyleBackColor = false;
@@ -288,10 +308,10 @@
             // 
             this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button6.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(278, 411);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Location = new System.Drawing.Point(371, 506);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 37);
+            this.button6.Size = new System.Drawing.Size(112, 46);
             this.button6.TabIndex = 56;
             this.button6.Text = "SİL";
             this.button6.UseVisualStyleBackColor = false;
@@ -302,18 +322,18 @@
             this.cinsiyethk.Items.AddRange(new object[] {
             "Kadın",
             "Erkek"});
-            this.cinsiyethk.Location = new System.Drawing.Point(153, 266);
-            this.cinsiyethk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cinsiyethk.Location = new System.Drawing.Point(204, 327);
+            this.cinsiyethk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cinsiyethk.Name = "cinsiyethk";
-            this.cinsiyethk.Size = new System.Drawing.Size(152, 21);
+            this.cinsiyethk.Size = new System.Drawing.Size(201, 24);
             this.cinsiyethk.TabIndex = 57;
             // 
             // hastakayit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(752, 490);
+            this.ClientSize = new System.Drawing.Size(1003, 603);
             this.Controls.Add(this.cinsiyethk);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -336,7 +356,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "hastakayit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "hastakayit";
