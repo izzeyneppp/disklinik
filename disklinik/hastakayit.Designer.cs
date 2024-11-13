@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hastakayit));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hastadata = new System.Windows.Forms.DataGridView();
             this.telefonhk = new System.Windows.Forms.TextBox();
             this.alerjihk = new System.Windows.Forms.TextBox();
             this.adreshk = new System.Windows.Forms.TextBox();
@@ -54,14 +54,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.cinsiyethk = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastadata)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // hastadata
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.hastadata.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -69,11 +69,11 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(429, 188);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
+            this.hastadata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.hastadata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.hastadata.Location = new System.Drawing.Point(432, 203);
+            this.hastadata.Margin = new System.Windows.Forms.Padding(4);
+            this.hastadata.Name = "hastadata";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -81,18 +81,18 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 258);
-            this.dataGridView1.TabIndex = 50;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.hastadata.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.hastadata.RowHeadersWidth = 51;
+            this.hastadata.Size = new System.Drawing.Size(545, 258);
+            this.hastadata.TabIndex = 50;
+            this.hastadata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // telefonhk
             // 
             this.telefonhk.BackColor = System.Drawing.Color.White;
             this.telefonhk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.telefonhk.Location = new System.Drawing.Point(204, 231);
-            this.telefonhk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.telefonhk.Margin = new System.Windows.Forms.Padding(4);
             this.telefonhk.Name = "telefonhk";
             this.telefonhk.Size = new System.Drawing.Size(199, 22);
             this.telefonhk.TabIndex = 49;
@@ -102,7 +102,7 @@
             this.alerjihk.BackColor = System.Drawing.Color.White;
             this.alerjihk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.alerjihk.Location = new System.Drawing.Point(204, 377);
-            this.alerjihk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alerjihk.Margin = new System.Windows.Forms.Padding(4);
             this.alerjihk.Name = "alerjihk";
             this.alerjihk.Size = new System.Drawing.Size(199, 22);
             this.alerjihk.TabIndex = 47;
@@ -112,7 +112,7 @@
             this.adreshk.BackColor = System.Drawing.Color.White;
             this.adreshk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adreshk.Location = new System.Drawing.Point(204, 423);
-            this.adreshk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adreshk.Margin = new System.Windows.Forms.Padding(4);
             this.adreshk.Name = "adreshk";
             this.adreshk.Size = new System.Drawing.Size(199, 22);
             this.adreshk.TabIndex = 46;
@@ -120,7 +120,7 @@
             // doğumtarihihk
             // 
             this.doğumtarihihk.Location = new System.Drawing.Point(204, 281);
-            this.doğumtarihihk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.doğumtarihihk.Margin = new System.Windows.Forms.Padding(4);
             this.doğumtarihihk.Name = "doğumtarihihk";
             this.doğumtarihihk.Size = new System.Drawing.Size(199, 22);
             this.doğumtarihihk.TabIndex = 45;
@@ -130,7 +130,7 @@
             this.hastaadsoyad.BackColor = System.Drawing.Color.White;
             this.hastaadsoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hastaadsoyad.Location = new System.Drawing.Point(204, 185);
-            this.hastaadsoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hastaadsoyad.Margin = new System.Windows.Forms.Padding(4);
             this.hastaadsoyad.Name = "hastaadsoyad";
             this.hastaadsoyad.Size = new System.Drawing.Size(199, 22);
             this.hastaadsoyad.TabIndex = 44;
@@ -199,7 +199,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(968, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 30);
             this.button1.TabIndex = 29;
@@ -341,7 +341,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.hastadata);
             this.Controls.Add(this.telefonhk);
             this.Controls.Add(this.alerjihk);
             this.Controls.Add(this.adreshk);
@@ -360,7 +360,7 @@
             this.Name = "hastakayit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "hastakayit";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastadata)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -371,7 +371,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView hastadata;
         private System.Windows.Forms.TextBox telefonhk;
         private System.Windows.Forms.TextBox alerjihk;
         private System.Windows.Forms.TextBox adreshk;

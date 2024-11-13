@@ -13,7 +13,7 @@ namespace disklinik
 {
     public partial class hastakayit : Form
     {
-        private object hastadata;
+        
 
         public hastakayit()
         {
@@ -57,7 +57,7 @@ namespace disklinik
             hastalar hst = new hastalar();
             string query = "select * from hastakayit";
             DataSet ds = hst.Showhasta(query);
-      
+            hastadata.DataSource = ds.Tables[0];
             hastaadsoyad.Text = "";
             telefonhk.Text = "";
             cinsiyethk.Text = "";
