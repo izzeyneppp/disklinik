@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace disklinik
@@ -56,7 +57,7 @@ namespace disklinik
             hastalar hst = new hastalar();
             string query = "select * from hastakayit";
             DataSet ds = hst.Showhasta(query);
-            hastadata.DataSource = ds.Tables[0];
+      
             hastaadsoyad.Text = "";
             telefonhk.Text = "";
             cinsiyethk.Text = "";
