@@ -16,7 +16,7 @@ namespace disklinik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new hastakayit());
+            Application.Run(new Form1());
         }
     }
 }

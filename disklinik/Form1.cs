@@ -30,7 +30,11 @@ namespace disklinik
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            anasayfa anaSayfaFormu = new anasayfa(); 
+            anaSayfaFormu.Show(); 
+
+            
+            this.Hide();
 
         }
 

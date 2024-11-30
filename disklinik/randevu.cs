@@ -23,5 +23,10 @@ namespace disklinik
             Application.Exit();
 
         }
+
+        private void randevu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

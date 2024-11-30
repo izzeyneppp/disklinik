@@ -79,6 +79,11 @@ namespace disklinik
         {
             yenile();
         }
+
+        private void hastakayit_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
