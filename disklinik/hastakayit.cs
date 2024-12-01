@@ -28,7 +28,7 @@ namespace disklinik
         private void button4_Click(object sender, EventArgs e)
         {
             string query = "INSERT INTO hastakayit (hasta_adi, hasta_telefon,hasta_adres,hasta_dg,hasta_cinsiyet,hasta_alerji) " +
-                        "VALUES ('" + hastaadsoyad.Text + "', '" + telefonhk.Text + "', '" + adreshk.Text + "', '" +
+                        "VALUES ('" + hastaadsoyad.Text + "', '" + telefonHst.Text + "', '" + adreshk.Text + "', '" +
                         doğumtarihihk.Text + "', '" + cinsiyethk.SelectedItem.ToString() + "', '" + alerjihk.Text + "')";
             hastalar hst = new hastalar();
 
@@ -59,7 +59,7 @@ namespace disklinik
             DataSet ds = hst.Showhasta(query);
             hastadata.DataSource = ds.Tables[0];
             hastaadsoyad.Text = "";
-            telefonhk.Text = "";
+            telefonHst.Text = "";
             cinsiyethk.Text = "";
             alerjihk.Text = "";
             adreshk.Text = "";
@@ -83,6 +83,25 @@ namespace disklinik
         private void hastakayit_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void homeHasta_Click(object sender, EventArgs e)
+        {
+            anasayfa frmAnaSayfa = new anasayfa();
+            frmAnaSayfa.Show();
+            this.Hide();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            anasayfa frmAnaSayfa = new anasayfa();
+            frmAnaSayfa.Show();
+            this.Hide();
         }
     }
 }

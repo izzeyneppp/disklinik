@@ -28,5 +28,19 @@ namespace disklinik
         {
 
         }
+
+        private void homeRandevu_Click(object sender, EventArgs e)
+        {
+            anasayfa frmAnaSayfa = new anasayfa();
+            frmAnaSayfa.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            anasayfa frmAnaSayfa = new anasayfa();
+            frmAnaSayfa.Show();
+            this.Hide();
+        }
     }
 }

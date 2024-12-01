@@ -23,5 +23,12 @@ namespace disklinik
             Application.Exit();
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            anasayfa frmAnaSayfa = new anasayfa();
+            frmAnaSayfa.Show();
+            this.Hide();
+        }
     }
 }
