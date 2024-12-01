@@ -19,11 +19,29 @@ namespace disklinik
         {
             InitializeComponent();
         }
-
+        int key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
+            
+            
+            
+                hastaadsoyad.Text = hastadata.Rows[e.RowIndex].Cells[1].Value.ToString();
+                telefonHst.Text= hastadata.Rows[e.RowIndex].Cells[2].Value.ToString();
+                adreshk.Text= hastadata.Rows[e.RowIndex].Cells[3].Value.ToString(); 
+                doğumtarihihk.Text= hastadata.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cinsiyethk.SelectedItem= hastadata.Rows[e.RowIndex].Cells[5].Value.ToString();
+                alerjihk.Text= hastadata.Rows[e.RowIndex].Cells[6].Value.ToString();
+            if (hastaadsoyad.Text=="")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(hastadata.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
