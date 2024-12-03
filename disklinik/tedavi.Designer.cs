@@ -261,6 +261,7 @@
             this.tedavidata.Size = new System.Drawing.Size(545, 258);
             this.tedavidata.TabIndex = 96;
             this.tedavidata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tedavidata_CellClick);
+            this.tedavidata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tedavidata_CellContentClick);
             // 
             // tedavi
             // 

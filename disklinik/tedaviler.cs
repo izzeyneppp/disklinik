@@ -10,7 +10,7 @@ namespace disklinik
 {
     internal class tedaviler
     {
-        public void hasta_ekle(string query)
+        public void tedavi_ekle(string query)
         {
             ConnectionString MyConnection = new ConnectionString();
             SqlConnection baglanti = MyConnection.GetCon();
@@ -21,7 +21,7 @@ namespace disklinik
             komut.ExecuteNonQuery();
             baglanti.Close();
         }
-        public void tedacisil(string query)
+        public void tedavisil(string query)
         {
             ConnectionString MyConnection = new ConnectionString();
             SqlConnection baglanti = MyConnection.GetCon();

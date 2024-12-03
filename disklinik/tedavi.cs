@@ -35,18 +35,18 @@ namespace disklinik
         {
             string query = "INSERT INTO Tedavi (tedavi_ad, tedavi_fiyat, tedavi_aciklama) " +
                       "VALUES ('" + tedaviadited.Text + "', '" + fiyatted.Text + "', '" + açiklamated.Text + "')";
-            hastalar hst = new hastalar();
+            tedaviler ted = new tedaviler();
 
             try
             {
-                hst.hasta_ekle(query);
+                ted.tedavi_ekle(query);
                 MessageBox.Show("TEDAVİ KAYDI BAŞARIYLA EKLENDİ");
                 
 
             }
             catch (Exception)
             {
-                hst.hasta_ekle(query);
+                ted.tedavi_ekle(query);
                 MessageBox.Show("Tedavi kaydı başarıyla eklendi.");
                 yenile();
 
@@ -73,7 +73,7 @@ namespace disklinik
 
         private void button5_Click(object sender, EventArgs e)
         {
-            hastalar hst = new hastalar();
+            tedaviler ted = new tedaviler();
             if (key == 0)
             {
                 MessageBox.Show("Düzenlenecek Tedaviyi Seçiniz");
@@ -98,7 +98,7 @@ namespace disklinik
 
         private void button6_Click(object sender, EventArgs e)
         {
-            hastalar hst = new hastalar();
+            tedaviler ted = new tedaviler();
             if (key == 0)
             {
                 MessageBox.Show("Silinecek Tedaviyi Seçiniz");
@@ -109,7 +109,7 @@ namespace disklinik
                 {
 
                     string query = "delete from Tedavi where tedavi_id=" + key + "";
-                    hst.hastasil(query);
+                    ted.tedavisil(query);
                     MessageBox.Show("Tedavi Başarıyla Silindi");
                     uyeler();
                     yenile();
@@ -126,6 +126,7 @@ namespace disklinik
         private void button3_Click(object sender, EventArgs e)
         {
             yenile();
+            uyeler();
         }
 
         private void tedavi_Load(object sender, EventArgs e)
@@ -140,6 +141,22 @@ namespace disklinik
             fiyatted.Text = tedavidata.Rows[e.RowIndex].Cells[2].Value.ToString();
             açiklamated.Text = tedavidata.Rows[e.RowIndex].Cells[3].Value.ToString();
           
+            if (tedaviadited.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(tedavidata.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+        }
+
+        private void tedavidata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tedaviadited.Text = tedavidata.Rows[e.RowIndex].Cells[1].Value.ToString();
+            fiyatted.Text = tedavidata.Rows[e.RowIndex].Cells[2].Value.ToString();
+            açiklamated.Text = tedavidata.Rows[e.RowIndex].Cells[3].Value.ToString();
+
             if (tedaviadited.Text == "")
             {
                 key = 0;
