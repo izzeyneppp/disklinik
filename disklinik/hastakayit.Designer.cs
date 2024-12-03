@@ -297,6 +297,7 @@
             this.button5.TabIndex = 55;
             this.button5.Text = "DÜZENLE";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -315,7 +316,7 @@
             // 
             this.cinsiyethk.FormattingEnabled = true;
             this.cinsiyethk.Items.AddRange(new object[] {
-            "Kadın",
+            "Kadin",
             "Erkek"});
             this.cinsiyethk.Location = new System.Drawing.Point(153, 266);
             this.cinsiyethk.Margin = new System.Windows.Forms.Padding(2);

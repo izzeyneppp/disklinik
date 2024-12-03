@@ -86,6 +86,7 @@
     <Compile Include="tedavi.Designer.cs">
       <DependentUpon>tedavi.cs</DependentUpon>
     </Compile>
+    <Compile Include="tedaviler.cs" />
     <EmbeddedResource Include="anasayfa.resx">
       <DependentUpon>anasayfa.cs</DependentUpon>
     </EmbeddedResource>

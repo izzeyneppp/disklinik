@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
-using System.Collections;
 
 namespace disklinik
 {
-    class hastalar
+    internal class tedaviler
     {
         public void hasta_ekle(string query)
         {
@@ -19,7 +18,7 @@ namespace disklinik
             komut.Connection = baglanti;
             baglanti.Open();
             komut.CommandText = query;
-            komut.ExecuteNonQuery();   
+            komut.ExecuteNonQuery();
             baglanti.Close();
         }
         public void hastasil(string query)

@@ -30,5 +30,20 @@ namespace disklinik
             frmAnaSayfa.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void yenile()
+        {
+
+            tedaviadited.Text = "";
+            fiyatted.Text = "";
+            açiklamated.Text = "";
+           
+
+
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace disklinik
                 cinsiyethk.SelectedItem= hastadata.Rows[e.RowIndex].Cells[5].Value.ToString();
                 alerjihk.Text= hastadata.Rows[e.RowIndex].Cells[6].Value.ToString();
             if (hastaadsoyad.Text=="")
-            {
+            {   
                 key = 0;
             }
             else
@@ -54,6 +54,7 @@ namespace disklinik
             {
                 hst.hasta_ekle(query);
                 MessageBox.Show("HASTA BAŞARIYLA EKLENDİ");
+                uyeler();
 
             }
             catch (Exception)
@@ -69,16 +70,19 @@ namespace disklinik
         {
             Application.Exit();
         }
-
-        public void yenile()
+        void uyeler()
         {
             hastalar hst = new hastalar();
             string query = "select * from hastakayit";
             DataSet ds = hst.Showhasta(query);
             hastadata.DataSource = ds.Tables[0];
+        }
+        public void yenile()
+        {
+            
             hastaadsoyad.Text = "";
             telefonHst.Text = "";
-            cinsiyethk.Text = "";
+            cinsiyethk.SelectedItem= "";
             alerjihk.Text = "";
             adreshk.Text = "";
 
@@ -137,7 +141,8 @@ namespace disklinik
                     string query = "delete from hastakayit where hasta_id=" + key + "";
                     hst.hastasil(query);
                     MessageBox.Show("Hasta Başarıyla Silindi");
-
+                    uyeler();
+                    yenile();
                    
                 }
                 catch (Exception ex)
@@ -147,6 +152,32 @@ namespace disklinik
             }
             
             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            hastalar hst = new hastalar();
+            if (key == 0)
+            {
+                MessageBox.Show("Düzenlenecek Hastayı Seçiniz");
+            }
+            else
+            {
+                try
+                {
+
+                    string query = "update hastakayit set hasta_adi='" + hastaadsoyad.Text + "', hasta_telefon='"+telefonHst.Text+"',hasta_adres='"+adreshk.Text+"',hasta_dg='"+doğumtarihihk.Text+"', hasta_cinsiyet= '"+cinsiyethk.SelectedItem.ToString()+"', hasta_alerji='"+alerjihk.Text+"'  where hasta_id=" + key + "";
+                    hst.hastasil(query);
+                    MessageBox.Show("Hasta Başarıyla güncellendi");
+                    uyeler();
+                    yenile();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
