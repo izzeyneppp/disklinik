@@ -21,7 +21,7 @@ namespace disklinik
             komut.ExecuteNonQuery();
             baglanti.Close();
         }
-        public void hastasil(string query)
+        public void tedacisil(string query)
         {
             ConnectionString MyConnection = new ConnectionString();
             SqlConnection baglanti = MyConnection.GetCon();
@@ -33,7 +33,7 @@ namespace disklinik
             baglanti.Close();
         }
 
-        public void hastaguncelle(string query)
+        public void tedaviguncelle(string query)
         {
             ConnectionString MyConnection = new ConnectionString();
             SqlConnection baglanti = MyConnection.GetCon();
@@ -45,7 +45,7 @@ namespace disklinik
             baglanti.Close();
         }
 
-        public DataSet Showhasta(string query)
+        public DataSet Showtedavi(string query)
         {
             ConnectionString MyConnection = new ConnectionString();
             SqlConnection baglanti = MyConnection.GetCon();
