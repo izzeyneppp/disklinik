@@ -22,6 +22,17 @@ namespace disklinik
             komut.ExecuteNonQuery();   
             baglanti.Close();
         }
+        public void hastasil(string query)
+        {
+            ConnectionString MyConnection = new ConnectionString();
+            SqlConnection baglanti = MyConnection.GetCon();
+            SqlCommand komut = new SqlCommand();
+            komut.Connection = baglanti;
+            baglanti.Open();
+            komut.CommandText = query;
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+        }
 
         public DataSet Showhasta(string query)
         {

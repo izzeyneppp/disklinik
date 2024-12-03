@@ -121,6 +121,33 @@ namespace disklinik
             frmAnaSayfa.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            hastalar hst = new hastalar();
+            if (key == 0)
+            {
+                MessageBox.Show("Silinecek Hastayı Seçiniz");
+            }
+            else
+            {
+                try
+                {
+                    
+                    string query = "delete from hastakayit where hasta_id=" + key + "";
+                    hst.hastasil(query);
+                    MessageBox.Show("Hasta Başarıyla Silindi");
+
+                   
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
+            
+        }
     }
 }
 

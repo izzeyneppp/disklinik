@@ -220,7 +220,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(752, 89);
             this.panel1.TabIndex = 36;
@@ -229,7 +229,7 @@
             // 
             this.pictureBox1.Image = global::disklinik.Properties.Resources.VUSLAT_DENTAL__2_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -243,7 +243,7 @@
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(538, 110);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(62, 37);
             this.button2.TabIndex = 51;
@@ -254,7 +254,7 @@
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Location = new System.Drawing.Point(360, 121);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(143, 20);
             this.textBox6.TabIndex = 52;
@@ -265,7 +265,7 @@
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(634, 110);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 37);
             this.button3.TabIndex = 53;
@@ -278,7 +278,7 @@
             this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button4.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.Location = new System.Drawing.Point(23, 411);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(84, 37);
             this.button4.TabIndex = 54;
@@ -291,7 +291,7 @@
             this.button5.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button5.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.Location = new System.Drawing.Point(151, 411);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(84, 37);
             this.button5.TabIndex = 55;
@@ -303,12 +303,13 @@
             this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button6.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button6.Location = new System.Drawing.Point(278, 411);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(84, 37);
             this.button6.TabIndex = 56;
             this.button6.Text = "SİL";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // cinsiyethk
             // 
@@ -317,7 +318,7 @@
             "Kadın",
             "Erkek"});
             this.cinsiyethk.Location = new System.Drawing.Point(153, 266);
-            this.cinsiyethk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cinsiyethk.Margin = new System.Windows.Forms.Padding(2);
             this.cinsiyethk.Name = "cinsiyethk";
             this.cinsiyethk.Size = new System.Drawing.Size(152, 21);
             this.cinsiyethk.TabIndex = 57;
@@ -325,7 +326,7 @@
             // telefonHst
             // 
             this.telefonHst.Location = new System.Drawing.Point(153, 186);
-            this.telefonHst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.telefonHst.Margin = new System.Windows.Forms.Padding(2);
             this.telefonHst.Mask = "(999) 000-0000";
             this.telefonHst.Name = "telefonHst";
             this.telefonHst.Size = new System.Drawing.Size(150, 20);
@@ -360,7 +361,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "hastakayit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "hastakayit";
