@@ -36,7 +36,8 @@ namespace disklinik
             else
             {
                 key = Convert.ToInt32(hastadata.Rows[e.RowIndex].Cells[0].Value.ToString());
-                yenile();
+                
+                uyeler();
             }   
         }
 
