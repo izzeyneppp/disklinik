@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recete));
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -37,20 +39,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ilacad = new System.Windows.Forms.TextBox();
+            this.fiyatrecete = new System.Windows.Forms.TextBox();
+            this.aciklamarecete = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.recetead = new System.Windows.Forms.ComboBox();
+            this.recetedata = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recetedata)).BeginInit();
             this.SuspendLayout();
             // 
             // button6
@@ -78,6 +80,7 @@
             this.button4.TabIndex = 74;
             this.button4.Text = "KAYDET";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -120,7 +123,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(952, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 30);
             this.button1.TabIndex = 29;
@@ -135,7 +138,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(269, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 29);
+            this.label1.Size = new System.Drawing.Size(522, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "DENTALAİD HASTA KAYIT SİSTEMİ";
             // 
@@ -150,46 +153,37 @@
             this.button5.TabIndex = 75;
             this.button5.Text = "DÜZENLE";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // dataGridView1
+            // ilacad
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(429, 190);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 258);
-            this.dataGridView1.TabIndex = 70;
+            this.ilacad.BackColor = System.Drawing.Color.White;
+            this.ilacad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ilacad.Location = new System.Drawing.Point(173, 252);
+            this.ilacad.Margin = new System.Windows.Forms.Padding(4);
+            this.ilacad.Name = "ilacad";
+            this.ilacad.Size = new System.Drawing.Size(199, 22);
+            this.ilacad.TabIndex = 69;
             // 
-            // textBox5
+            // fiyatrecete
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(173, 252);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(199, 22);
-            this.textBox5.TabIndex = 69;
+            this.fiyatrecete.BackColor = System.Drawing.Color.White;
+            this.fiyatrecete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fiyatrecete.Location = new System.Drawing.Point(173, 321);
+            this.fiyatrecete.Margin = new System.Windows.Forms.Padding(4);
+            this.fiyatrecete.Name = "fiyatrecete";
+            this.fiyatrecete.Size = new System.Drawing.Size(199, 22);
+            this.fiyatrecete.TabIndex = 68;
             // 
-            // textBox4
+            // aciklamarecete
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(173, 321);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 22);
-            this.textBox4.TabIndex = 68;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(173, 390);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 22);
-            this.textBox3.TabIndex = 67;
+            this.aciklamarecete.BackColor = System.Drawing.Color.White;
+            this.aciklamarecete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.aciklamarecete.Location = new System.Drawing.Point(173, 390);
+            this.aciklamarecete.Margin = new System.Windows.Forms.Padding(4);
+            this.aciklamarecete.Name = "aciklamarecete";
+            this.aciklamarecete.Size = new System.Drawing.Size(199, 22);
+            this.aciklamarecete.TabIndex = 67;
             // 
             // label5
             // 
@@ -197,7 +191,7 @@
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(25, 386);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 21);
+            this.label5.Size = new System.Drawing.Size(113, 25);
             this.label5.TabIndex = 61;
             this.label5.Text = "Açıklama :";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -208,7 +202,7 @@
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(61, 319);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 21);
+            this.label4.Size = new System.Drawing.Size(70, 25);
             this.label4.TabIndex = 60;
             this.label4.Text = "Fiyat :";
             // 
@@ -218,7 +212,7 @@
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(40, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 21);
+            this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 59;
             this.label3.Text = "İlaç Adı :";
             // 
@@ -228,7 +222,7 @@
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(26, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 21);
+            this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 58;
             this.label2.Text = "Ad Soyad :";
             // 
@@ -258,31 +252,59 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // comboBox1
+            // recetead
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(173, 181);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 24);
-            this.comboBox1.TabIndex = 77;
+            this.recetead.FormattingEnabled = true;
+            this.recetead.Location = new System.Drawing.Point(173, 181);
+            this.recetead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.recetead.Name = "recetead";
+            this.recetead.Size = new System.Drawing.Size(199, 24);
+            this.recetead.TabIndex = 77;
+            // 
+            // recetedata
+            // 
+            this.recetedata.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recetedata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.recetedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.recetedata.Location = new System.Drawing.Point(412, 189);
+            this.recetedata.Margin = new System.Windows.Forms.Padding(4);
+            this.recetedata.Name = "recetedata";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recetedata.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.recetedata.RowHeadersWidth = 51;
+            this.recetedata.Size = new System.Drawing.Size(545, 258);
+            this.recetedata.TabIndex = 78;
+            this.recetedata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.recetedata_CellClick);
             // 
             // recete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 556);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.recetedata);
+            this.Controls.Add(this.recetead);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.ilacad);
+            this.Controls.Add(this.fiyatrecete);
+            this.Controls.Add(this.aciklamarecete);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -294,10 +316,10 @@
             this.Name = "recete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "recete";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recetedata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,15 +336,15 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ilacad;
+        private System.Windows.Forms.TextBox fiyatrecete;
+        private System.Windows.Forms.TextBox aciklamarecete;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox recetead;
+        private System.Windows.Forms.DataGridView recetedata;
     }
 }

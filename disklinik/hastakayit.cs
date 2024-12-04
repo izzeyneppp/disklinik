@@ -21,25 +21,23 @@ namespace disklinik
         }
         int key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-            
-            
-            
+        {         
                 hastaadsoyad.Text = hastadata.Rows[e.RowIndex].Cells[1].Value.ToString();
                 telefonHst.Text= hastadata.Rows[e.RowIndex].Cells[2].Value.ToString();
                 adreshk.Text= hastadata.Rows[e.RowIndex].Cells[3].Value.ToString(); 
                 doğumtarihihk.Text= hastadata.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cinsiyethk.SelectedItem= hastadata.Rows[e.RowIndex].Cells[5].Value.ToString();
                 alerjihk.Text= hastadata.Rows[e.RowIndex].Cells[6].Value.ToString();
-            if (hastaadsoyad.Text=="")
-            {   
+            if (hastaadsoyad.Text == "")
+            {
                 key = 0;
+                
             }
             else
             {
                 key = Convert.ToInt32(hastadata.Rows[e.RowIndex].Cells[0].Value.ToString());
-            }
+                yenile();
+            }   
         }
 
 
@@ -54,13 +52,15 @@ namespace disklinik
             {
                 hst.hasta_ekle(query);
                 MessageBox.Show("HASTA BAŞARIYLA EKLENDİ");
+                yenile();
                 uyeler();
 
             }
             catch (Exception)
             {
                 hst.hasta_ekle(query);
-                MessageBox.Show("Hasta başarıyla eklendi.");
+                MessageBox.Show("Hasta Başarıyla Eklendi.");
+                uyeler();
                 yenile();
 
             }
@@ -100,6 +100,7 @@ namespace disklinik
         private void button3_Click_1(object sender, EventArgs e)
         {
             yenile();
+            uyeler();
         }
 
         private void hastakayit_Load_1(object sender, EventArgs e)
@@ -178,6 +179,12 @@ namespace disklinik
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void hastadata_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
         }
     }
 }

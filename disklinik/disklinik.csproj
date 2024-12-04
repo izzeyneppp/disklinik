@@ -53,6 +53,11 @@
       <DependentUpon>anasayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="disklinikDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>disklinikDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +85,7 @@
     <Compile Include="recete.Designer.cs">
       <DependentUpon>recete.cs</DependentUpon>
     </Compile>
+    <Compile Include="receteler.cs" />
     <Compile Include="tedavi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,17 @@
     <EmbeddedResource Include="tedavi.resx">
       <DependentUpon>tedavi.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="disklinikDataSet.xsc">
+      <DependentUpon>disklinikDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="disklinikDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>disklinikDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="disklinikDataSet.xss">
+      <DependentUpon>disklinikDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
