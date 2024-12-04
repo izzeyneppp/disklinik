@@ -256,6 +256,9 @@
             // recetead
             // 
             this.recetead.FormattingEnabled = true;
+            this.recetead.Items.AddRange(new object[] {
+            "fkhdflk",
+            "flkglk"});
             this.recetead.Location = new System.Drawing.Point(173, 181);
             this.recetead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recetead.Name = "recetead";
@@ -289,6 +292,7 @@
             this.recetedata.Size = new System.Drawing.Size(545, 258);
             this.recetedata.TabIndex = 78;
             this.recetedata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.recetedata_CellClick);
+            this.recetedata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.recetedata_CellContentClick);
             // 
             // recete
             // 

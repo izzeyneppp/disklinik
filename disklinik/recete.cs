@@ -56,13 +56,13 @@ namespace disklinik
         void uyeler()
         {
             receteler rec = new receteler();
-            string query = "select * from hastakayit";
+            string query = "select * from recete ";
             DataSet ds = rec.Showrecete(query);
             recetedata.DataSource = ds.Tables[0];
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO hastakayit (hasta_adi_soyadi, ilac_recete,fiyat_recete,aciklama_recete) " +
+            string query = "INSERT INTO recete (hasta_adi_soyadi, ilac_recete,fiyat_recete,aciklama_recete) " +
                         "VALUES ('" + recetead.SelectedItem.ToString() + "', '" + ilacad.Text + "', '" + fiyatrecete.Text + "', '" +
                         aciklamarecete.Text + "')";
            receteler rec = new receteler();
@@ -131,6 +131,11 @@ namespace disklinik
         {
             yenile();
             uyeler();
+        }
+
+        private void recetedata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
