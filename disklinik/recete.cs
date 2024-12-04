@@ -112,7 +112,25 @@ namespace disklinik
 
         private void recetedata_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            recetead.SelectedItem = recetedata.Rows[e.RowIndex].Cells[1].Value.ToString();
+            ilacad.Text = recetedata.Rows[e.RowIndex].Cells[2].Value.ToString();
+            fiyatrecete.Text = recetedata.Rows[e.RowIndex].Cells[3].Value.ToString();
+            aciklamarecete.Text= recetedata.Rows[e.RowIndex].Cells[4].Value.ToString();
 
+            if (recetead.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(recetedata.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            yenile();
+            uyeler();
         }
     }
 }
