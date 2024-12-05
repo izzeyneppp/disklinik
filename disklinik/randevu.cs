@@ -161,5 +161,23 @@ namespace disklinik
                 key = Convert.ToInt32(randevudata.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
+
+        private void randevudata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            adrandevu.SelectedItem = randevudata.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tedavirandevu.SelectedItem = randevudata.Rows[e.RowIndex].Cells[2].Value.ToString();
+            tarihrandevu.Text = randevudata.Rows[e.RowIndex].Cells[3].Value.ToString();
+            saatrandevu.SelectedItem = randevudata.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+            if (adrandevu.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(randevudata.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+        }
     }
 }

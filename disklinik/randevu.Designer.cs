@@ -308,6 +308,7 @@
             this.randevudata.Size = new System.Drawing.Size(545, 258);
             this.randevudata.TabIndex = 80;
             this.randevudata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.randevudata_CellClick);
+            this.randevudata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.randevudata_CellContentClick);
             // 
             // randevu
             // 
