@@ -7,11 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace disklinik
 {
     public partial class randevu : Form
     {
+        ConnectionString mycon = new ConnectionString();
+        private void fillhasta()
+        {
+            SqlConnection baglanti = mycon.GetCon();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select hasta_adi from hastakayit", baglanti);
+            SqlDataReader rdr;
+            rdr = komut.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("hasta_adi", typeof(string));
+            dt.Load(rdr);
+            adrandevu.ValueMember = "hasta_adi";
+            adrandevu.DataSource = dt;
+            baglanti.Close();
+
+
+        }
         public randevu()
         {
             InitializeComponent();
@@ -28,6 +46,7 @@ namespace disklinik
         {
             uyeler();
             yenile();
+            
         }
 
         private void homeRandevu_Click(object sender, EventArgs e)
