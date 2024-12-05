@@ -106,7 +106,8 @@ namespace disklinik
 
         private void hastakayit_Load_1(object sender, EventArgs e)
         {
-
+            uyeler();
+            yenile();
         }
 
         private void homeHasta_Click(object sender, EventArgs e)

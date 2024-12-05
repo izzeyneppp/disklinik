@@ -149,5 +149,11 @@ namespace disklinik
                 key = Convert.ToInt32(recetedata.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
+
+        private void recete_Load(object sender, EventArgs e)
+        {
+            uyeler();
+            yenile();
+        }
     }
 }

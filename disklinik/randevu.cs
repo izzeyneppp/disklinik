@@ -26,7 +26,8 @@ namespace disklinik
 
         private void randevu_Load(object sender, EventArgs e)
         {
-
+            uyeler();
+            yenile();
         }
 
         private void homeRandevu_Click(object sender, EventArgs e)
