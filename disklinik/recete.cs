@@ -62,15 +62,15 @@ namespace disklinik
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO recete (hasta_adi_soyadi, ilac_recete,fiyat_recete,aciklama_recete) " +
-                        "VALUES ('" + recetead.SelectedItem.ToString() + "', '" + ilacad.Text + "', '" + fiyatrecete.Text + "', '" +
+            string query = "INSERT INTO recete (hasta_adi_soyadi, fiyat_recete,ilac_recete,aciklama_recete) " +
+                        "VALUES ('" + recetead.SelectedItem.ToString() + "', '" + fiyatrecete.Text + "', '" + ilacad.Text + "', '" +
                         aciklamarecete.Text + "')";
            receteler rec = new receteler();
 
             try
             {
                 rec.recete_ekle(query);
-                MessageBox.Show("HASTA BAŞARIYLA EKLENDİ");
+                MessageBox.Show("REÇETE BAŞARIYLA EKLENDİ");
                 yenile();
                 uyeler();
 
@@ -78,7 +78,7 @@ namespace disklinik
             catch (Exception)
             {
                 rec.recete_ekle(query);
-                MessageBox.Show("Hasta Başarıyla Eklendi.");
+                MessageBox.Show("Reçete Başarıyla Eklendi.");
                 uyeler();
                 yenile();
 
@@ -90,15 +90,15 @@ namespace disklinik
             receteler rec = new receteler();
             if (key == 0)
             {
-                MessageBox.Show("Düzenlenecek Receteyi Seçiniz");
+                MessageBox.Show("Düzenlenecek Reçeteyi Seçiniz");
             }
             else
             {
                 try
                 {
 
-                    string query = "update hastakayit set hasta_adi_soyadi='" + recetead.SelectedItem.ToString() + "', ilac_recete='" + ilacad.Text + "',fiyat_recete='" + fiyatrecete.Text + "',aciklama_recete='" + aciklamarecete.Text + "' where recete_id=" + key + "";
-                    MessageBox.Show("Hasta Başarıyla güncellendi");
+                    string query = "update recete set hasta_adi_soyadi='" + recetead.SelectedItem.ToString() + "', ilac_recete='" + ilacad.Text + "',fiyat_recete='" + fiyatrecete.Text + "',aciklama_recete='" + aciklamarecete.Text + "' where recete_id=" + key + "";
+                    MessageBox.Show("Reçete Başarıyla güncellendi");
                     uyeler();
                     yenile();
 

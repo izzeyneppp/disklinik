@@ -83,7 +83,7 @@ namespace disklinik
                 try
                 {
 
-                    string query = "update hastakayit set tedavi_ad='" + tedaviadited.Text + "', tedavi_fiyat='" + fiyatted.Text + "',tedavi_aciklama='" + açiklamated.Text + "' where tedavi_id"+ key +"";
+                    string query = "update Tedavi set tedavi_ad='" + tedaviadited.Text + "', tedavi_fiyat='" + fiyatted.Text + "',tedavi_aciklama='" + açiklamated.Text + "' where tedavi_id"+ key +"";
                     MessageBox.Show("Tedavi Başarıyla güncellendi");
                     uyeler();
                     yenile();
