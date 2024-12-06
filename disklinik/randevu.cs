@@ -13,7 +13,7 @@ namespace disklinik
 {
     public partial class randevu : Form
     {
-        ConnectionString mycon = new ConnectionString();
+        ConnectionString mycon= new ConnectionString();
         private void fillhasta()
         {
             SqlConnection baglanti = mycon.GetCon();
@@ -26,6 +26,22 @@ namespace disklinik
             dt.Load(rdr);
             adrandevu.ValueMember = "hasta_adi";
             adrandevu.DataSource = dt;
+            baglanti.Close();
+
+
+        }
+        private void filltedavi()
+        {
+            SqlConnection baglanti = mycon.GetCon();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select tedavi_ad from Tedavi", baglanti);
+            SqlDataReader rdr;
+            rdr = komut.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("tedavi_ad", typeof(string));
+            dt.Load(rdr);
+            tedavirandevu.ValueMember = "tedavi_ad";
+            tedavirandevu.DataSource = dt;
             baglanti.Close();
 
 
@@ -46,6 +62,8 @@ namespace disklinik
         {
             uyeler();
             yenile();
+            fillhasta();
+            filltedavi();
             
         }
 

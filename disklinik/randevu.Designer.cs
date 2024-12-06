@@ -240,13 +240,14 @@
             // 
             this.saatrandevu.FormattingEnabled = true;
             this.saatrandevu.Items.AddRange(new object[] {
-            "09:00-10:00",
-            "10:00-11:00",
-            "11:00-12:00",
-            "13:00-14:00",
-            "14:00-15:00",
-            "15:00-16:00",
-            "16:00-17:00"});
+            "09:00",
+            "10:00",
+            "11:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00"});
             this.saatrandevu.Location = new System.Drawing.Point(172, 434);
             this.saatrandevu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saatrandevu.Name = "saatrandevu";

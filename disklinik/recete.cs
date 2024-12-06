@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,6 +53,21 @@ namespace disklinik
             
 
 
+        }
+        ConnectionString mycon = new ConnectionString();
+        private void fillhasta()
+        {
+            SqlConnection baglanti = mycon.GetCon();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select hasta_adi from hastakayit", baglanti);
+            SqlDataReader rdr;
+            rdr = komut.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("hasta_adi", typeof(string));
+            dt.Load(rdr);
+            recetead.ValueMember = "hasta_adi";
+            recetead.DataSource = dt;
+            baglanti.Close();
         }
         void uyeler()
         {
@@ -154,6 +170,12 @@ namespace disklinik
         {
             uyeler();
             yenile();
+            fillhasta();
+        }
+
+        private void recetead_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

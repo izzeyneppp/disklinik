@@ -264,6 +264,7 @@
             this.recetead.Name = "recetead";
             this.recetead.Size = new System.Drawing.Size(199, 24);
             this.recetead.TabIndex = 77;
+            this.recetead.SelectedIndexChanged += new System.EventHandler(this.recetead_SelectedIndexChanged);
             // 
             // recetedata
             // 
