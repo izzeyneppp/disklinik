@@ -36,7 +36,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tedaviarama = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -115,14 +115,15 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox6
+            // tedaviarama
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(480, 180);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 88;
+            this.tedaviarama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tedaviarama.Location = new System.Drawing.Point(480, 180);
+            this.tedaviarama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tedaviarama.Name = "tedaviarama";
+            this.tedaviarama.Size = new System.Drawing.Size(190, 22);
+            this.tedaviarama.TabIndex = 88;
+            this.tedaviarama.TextChanged += new System.EventHandler(this.tedaviarama_TextChanged);
             // 
             // button2
             // 
@@ -199,7 +200,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(971, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 30);
             this.button1.TabIndex = 29;
@@ -275,7 +276,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tedaviarama);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label4);
@@ -305,7 +306,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tedaviarama;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label4;

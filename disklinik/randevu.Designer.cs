@@ -34,8 +34,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.randevuarama = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -94,26 +93,15 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox6
+            // randevuarama
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(480, 151);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 72;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(717, 137);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 46);
-            this.button2.TabIndex = 71;
-            this.button2.Text = "ARA";
-            this.button2.UseVisualStyleBackColor = false;
+            this.randevuarama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.randevuarama.Location = new System.Drawing.Point(576, 151);
+            this.randevuarama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.randevuarama.Name = "randevuarama";
+            this.randevuarama.Size = new System.Drawing.Size(190, 22);
+            this.randevuarama.TabIndex = 72;
+            this.randevuarama.TextChanged += new System.EventHandler(this.randevuarama_TextChanged);
             // 
             // button1
             // 
@@ -320,8 +308,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.randevuarama);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.tarihrandevu);
             this.Controls.Add(this.label5);
@@ -351,8 +338,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox randevuarama;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;

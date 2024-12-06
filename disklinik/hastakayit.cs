@@ -78,6 +78,13 @@ namespace disklinik
             DataSet ds = hst.Showhasta(query);
             hastadata.DataSource = ds.Tables[0];
         }
+        void filter()
+        {
+            hastalar hst = new hastalar();
+            string query = "select * from hastakayit where hasta_adi like'%"+hastaarama.Text+"%'";
+            DataSet ds = hst.Showhasta(query);
+            hastadata.DataSource = ds.Tables[0];
+        }
         public void yenile()
         {
             
@@ -86,7 +93,7 @@ namespace disklinik
             cinsiyethk.SelectedItem= "";
             alerjihk.Text = "";
             adreshk.Text = "";
-
+            hastaarama.Text = "";
 
         }
 
@@ -204,6 +211,16 @@ namespace disklinik
 
                 uyeler();
             }
+        }
+
+        private void hastaarama_TextChanged(object sender, EventArgs e)
+        {
+            filter();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

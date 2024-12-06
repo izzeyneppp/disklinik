@@ -46,8 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.hastaarama = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -72,7 +71,7 @@
             this.hastadata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.hastadata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hastadata.Location = new System.Drawing.Point(432, 209);
-            this.hastadata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hastadata.Margin = new System.Windows.Forms.Padding(4);
             this.hastadata.Name = "hastadata";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -93,7 +92,7 @@
             this.alerjihk.BackColor = System.Drawing.Color.White;
             this.alerjihk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.alerjihk.Location = new System.Drawing.Point(204, 377);
-            this.alerjihk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alerjihk.Margin = new System.Windows.Forms.Padding(4);
             this.alerjihk.Name = "alerjihk";
             this.alerjihk.Size = new System.Drawing.Size(199, 22);
             this.alerjihk.TabIndex = 47;
@@ -103,7 +102,7 @@
             this.adreshk.BackColor = System.Drawing.Color.White;
             this.adreshk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adreshk.Location = new System.Drawing.Point(204, 423);
-            this.adreshk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adreshk.Margin = new System.Windows.Forms.Padding(4);
             this.adreshk.Name = "adreshk";
             this.adreshk.Size = new System.Drawing.Size(199, 22);
             this.adreshk.TabIndex = 46;
@@ -111,7 +110,7 @@
             // doğumtarihihk
             // 
             this.doğumtarihihk.Location = new System.Drawing.Point(204, 281);
-            this.doğumtarihihk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.doğumtarihihk.Margin = new System.Windows.Forms.Padding(4);
             this.doğumtarihihk.Name = "doğumtarihihk";
             this.doğumtarihihk.Size = new System.Drawing.Size(199, 22);
             this.doğumtarihihk.TabIndex = 45;
@@ -121,7 +120,7 @@
             this.hastaadsoyad.BackColor = System.Drawing.Color.White;
             this.hastaadsoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hastaadsoyad.Location = new System.Drawing.Point(204, 185);
-            this.hastaadsoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hastaadsoyad.Margin = new System.Windows.Forms.Padding(4);
             this.hastaadsoyad.Name = "hastaadsoyad";
             this.hastaadsoyad.Size = new System.Drawing.Size(199, 22);
             this.hastaadsoyad.TabIndex = 44;
@@ -192,7 +191,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(968, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 30);
             this.button1.TabIndex = 29;
@@ -237,27 +236,15 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button2
+            // hastaarama
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(717, 135);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 46);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "ARA";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(480, 149);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 52;
+            this.hastaarama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hastaarama.Location = new System.Drawing.Point(583, 149);
+            this.hastaarama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.hastaarama.Name = "hastaarama";
+            this.hastaarama.Size = new System.Drawing.Size(190, 22);
+            this.hastaarama.TabIndex = 52;
+            this.hastaarama.TextChanged += new System.EventHandler(this.hastaarama_TextChanged);
             // 
             // button3
             // 
@@ -346,8 +333,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.hastaarama);
             this.Controls.Add(this.hastadata);
             this.Controls.Add(this.alerjihk);
             this.Controls.Add(this.adreshk);
@@ -393,8 +379,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox hastaarama;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;

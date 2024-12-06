@@ -57,7 +57,13 @@ namespace disklinik
             Application.Exit();
 
         }
-
+        void filter()
+        {
+            randevular ran = new randevular();
+            string query = "select * from randevu where ad_soyad like'%" + randevuarama.Text + "%'";
+            DataSet ds = ran.Showrandevu(query);
+            randevudata.DataSource = ds.Tables[0];
+        }
         private void randevu_Load(object sender, EventArgs e)
         {
             uyeler();
@@ -87,7 +93,7 @@ namespace disklinik
             tedavirandevu.SelectedItem = "";
             tarihrandevu.Text = "";
             saatrandevu.SelectedItem = "";
-
+            randevuarama.Text = "";
 
 
         }
@@ -216,6 +222,11 @@ namespace disklinik
             {
                 key = Convert.ToInt32(randevudata.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
+        }
+
+        private void randevuarama_TextChanged(object sender, EventArgs e)
+        {
+            filter();
         }
     }
 }

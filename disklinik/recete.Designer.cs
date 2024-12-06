@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recete));
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.recetearama = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +50,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.recetead = new System.Windows.Forms.ComboBox();
             this.recetedata = new System.Windows.Forms.DataGridView();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recetedata)).BeginInit();
@@ -67,6 +69,7 @@
             this.button6.TabIndex = 76;
             this.button6.Text = "YAZDIR";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -96,14 +99,15 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox6
+            // recetearama
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(480, 151);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 72;
+            this.recetearama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.recetearama.Location = new System.Drawing.Point(480, 151);
+            this.recetearama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.recetearama.Name = "recetearama";
+            this.recetearama.Size = new System.Drawing.Size(190, 22);
+            this.recetearama.TabIndex = 72;
+            this.recetearama.TextChanged += new System.EventHandler(this.recetearama_TextChanged);
             // 
             // button2
             // 
@@ -269,31 +273,47 @@
             // recetedata
             // 
             this.recetedata.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.recetedata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recetedata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.recetedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.recetedata.Location = new System.Drawing.Point(412, 189);
             this.recetedata.Margin = new System.Windows.Forms.Padding(4);
             this.recetedata.Name = "recetedata";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.recetedata.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recetedata.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.recetedata.RowHeadersWidth = 51;
             this.recetedata.Size = new System.Drawing.Size(545, 258);
             this.recetedata.TabIndex = 78;
             this.recetedata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.recetedata_CellClick);
             this.recetedata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.recetedata_CellContentClick);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Text = "Baskı önizleme";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // recete
             // 
@@ -305,7 +325,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.recetearama);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.ilacad);
@@ -337,7 +357,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox recetearama;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -353,5 +373,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox recetead;
         private System.Windows.Forms.DataGridView recetedata;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

@@ -43,6 +43,13 @@ namespace disklinik
             frmAnaSayfa.Show();
             this.Hide();
         }
+        void filter()
+        {
+            receteler rec = new receteler();
+            string query = "select * from recete where hasta_adi_soyadi like'%" + recetearama.Text + "%'";
+            DataSet ds = rec.Showrecete(query);
+            recetedata.DataSource = ds.Tables[0];
+        }
         public void yenile()
         {
 
@@ -50,7 +57,8 @@ namespace disklinik
            fiyatrecete.Text = "";
             ilacad.Text = "";
             aciklamarecete.Text = "";
-            
+            recetearama.Text = "";
+
 
 
         }
@@ -176,6 +184,26 @@ namespace disklinik
         private void recetead_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void recetearama_TextChanged(object sender, EventArgs e)
+        {
+            filter();
+        }
+        Bitmap bitmap;
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int height = recetedata.Height;
+            recetedata.Height = recetedata.RowCount * recetedata.RowTemplate.Height * 2;
+            bitmap = new Bitmap(recetedata.Width,recetedata.Height);
+            recetedata.DrawToBitmap(bitmap, new Rectangle(0,20,recetedata.Width, recetedata.Height));
+            recetedata.Height=height;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bitmap, 0, 0); 
         }
     }
 }

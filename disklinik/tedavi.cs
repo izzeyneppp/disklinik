@@ -65,7 +65,7 @@ namespace disklinik
             tedaviadited.Text = "";
             fiyatted.Text = "";
             açiklamated.Text = "";
-           
+            tedaviarama.Text = "";
 
 
         }
@@ -128,11 +128,18 @@ namespace disklinik
             yenile();
             uyeler();
         }
-
+        void filter()
+        {
+            tedaviler ted  = new tedaviler();
+            string query = "select * from Tedavi where tedavi_ad like'%" + tedaviarama.Text + "%'";
+            DataSet ds = ted.Showtedavi(query);
+            tedavidata.DataSource = ds.Tables[0];
+        }
         private void tedavi_Load(object sender, EventArgs e)
         {
             uyeler();
             yenile();
+
         }
 
         private void tedavidata_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -165,6 +172,11 @@ namespace disklinik
             {
                 key = Convert.ToInt32(tedavidata.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
+        }
+
+        private void tedaviarama_TextChanged(object sender, EventArgs e)
+        {
+            filter();
         }
     }
 }
