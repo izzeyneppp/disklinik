@@ -13,10 +13,16 @@ namespace disklinik
 {
     public partial class Form1 : Form
     {
+        private const string CorrectUsername = "admin";
+        private const string CorrectPassword = "12345678901";
+        private int attemptCount = 0; 
+        private const int MaxAttempts = 3; 
+
         public Form1()
         {
             InitializeComponent();
         }
+       
         
         private void label5_Click(object sender, EventArgs e)
         {
@@ -30,11 +36,43 @@ namespace disklinik
 
         private void button1_Click(object sender, EventArgs e)
         {
-            anasayfa anaSayfaFormu = new anasayfa(); 
-            anaSayfaFormu.Show(); 
+
 
             
-            this.Hide();
+                string username = kullanici_id.Text;
+                string password = sifre_giris.Text; 
+
+              
+                if (password.Length != 11)
+                {
+                    MessageBox.Show("Şifre 11 haneli olmalıdır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+               
+                if (username == CorrectUsername && password == CorrectPassword)
+                {
+                    MessageBox.Show("Hoşgeldiniz!", "Başarılı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                anasayfa anaSayfaFormu = new anasayfa();
+
+
+                anaSayfaFormu.Show();
+                this.Hide(); 
+                }
+                else
+                {
+                    attemptCount++; // Deneme sayısını artır
+                    if (attemptCount >= MaxAttempts)
+                    {
+                        MessageBox.Show("Maksimum giriş hakkını doldurdunuz! Uygulama kapatılıyor.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Application.Exit(); // Uygulamayı kapat
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Kullanıcı adı veya şifre hatalı! Kalan hakkınız: {MaxAttempts - attemptCount}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+               
 
         }
 
@@ -45,7 +83,7 @@ namespace disklinik
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        public void label3_Click(object sender, EventArgs e)
         {
 
         }
