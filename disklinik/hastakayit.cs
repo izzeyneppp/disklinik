@@ -78,6 +78,8 @@ namespace disklinik
             DataSet ds = hst.Showhasta(query);
             hastadata.DataSource = ds.Tables[0];
         }
+       
+        
         void filter()
         {
             hastalar hst = new hastalar();
