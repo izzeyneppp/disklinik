@@ -19,7 +19,7 @@ namespace disklinik
             komut.Connection = baglanti;
             baglanti.Open();
             komut.CommandText = query;
-            _ = komut.ExecuteNonQuery();
+            komut.ExecuteNonQuery();
             baglanti.Close();
         }
         public void hastasil(string query)

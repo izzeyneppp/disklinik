@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace disklinik
 {
-    internal class doktorlar
+    class doktorlar
     {
 
         public void doktor_ekle(string query)
@@ -19,7 +19,7 @@ namespace disklinik
             komut.Connection = baglanti;
             baglanti.Open();
             komut.CommandText = query;
-            _ = komut.ExecuteNonQuery();
+            komut.ExecuteNonQuery();
             baglanti.Close();
         }
         public void doktorsil(string query)

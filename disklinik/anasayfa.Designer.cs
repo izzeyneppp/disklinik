@@ -166,7 +166,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(285, 119);
             this.button6.TabIndex = 52;
-            this.button6.Text = "HASTA KAYIT";
+            this.button6.Text = "DOKTOR KAYIT";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
