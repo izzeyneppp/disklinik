@@ -56,5 +56,17 @@ namespace disklinik
 
             this.Hide();
         }
+
+        private void anasayfa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            doktorkayit frmdoktorkayit = new doktorkayit();
+            frmdoktorkayit.Show();
+            this.Hide();
+        }
     }
 }
