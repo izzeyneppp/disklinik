@@ -63,6 +63,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>disklinikDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="doktorkayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doktorkayit.Designer.cs">
+      <DependentUpon>doktorkayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doktorlar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +108,9 @@
     <Compile Include="tedaviler.cs" />
     <EmbeddedResource Include="anasayfa.resx">
       <DependentUpon>anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doktorkayit.resx">
+      <DependentUpon>doktorkayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
