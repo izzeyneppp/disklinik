@@ -49,6 +49,8 @@
             this.saatrandevu = new System.Windows.Forms.ComboBox();
             this.tedavirandevu = new System.Windows.Forms.ComboBox();
             this.randevudata = new System.Windows.Forms.DataGridView();
+            this.randevudr = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevudata)).BeginInit();
@@ -143,7 +145,7 @@
             // 
             // tarihrandevu
             // 
-            this.tarihrandevu.Location = new System.Drawing.Point(172, 358);
+            this.tarihrandevu.Location = new System.Drawing.Point(172, 332);
             this.tarihrandevu.Margin = new System.Windows.Forms.Padding(4);
             this.tarihrandevu.Name = "tarihrandevu";
             this.tarihrandevu.Size = new System.Drawing.Size(199, 22);
@@ -153,7 +155,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(81, 433);
+            this.label5.Location = new System.Drawing.Point(103, 382);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 25);
             this.label5.TabIndex = 61;
@@ -163,7 +165,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(77, 354);
+            this.label4.Location = new System.Drawing.Point(98, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 60;
@@ -173,7 +175,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(66, 276);
+            this.label3.Location = new System.Drawing.Point(85, 271);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 25);
             this.label3.TabIndex = 59;
@@ -183,7 +185,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(44, 196);
+            this.label2.Location = new System.Drawing.Point(57, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 58;
@@ -218,7 +220,7 @@
             // adrandevu
             // 
             this.adrandevu.FormattingEnabled = true;
-            this.adrandevu.Location = new System.Drawing.Point(172, 203);
+            this.adrandevu.Location = new System.Drawing.Point(172, 207);
             this.adrandevu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.adrandevu.Name = "adrandevu";
             this.adrandevu.Size = new System.Drawing.Size(199, 24);
@@ -236,7 +238,7 @@
             "15.00-16.00",
             "16.00-17.00",
             "17.00-18.00"});
-            this.saatrandevu.Location = new System.Drawing.Point(172, 434);
+            this.saatrandevu.Location = new System.Drawing.Point(172, 382);
             this.saatrandevu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saatrandevu.Name = "saatrandevu";
             this.saatrandevu.Size = new System.Drawing.Size(199, 24);
@@ -261,7 +263,7 @@
             "Pedodonti – Çocuk Diş Hekimliği",
             "Periodontoloji",
             "Zirkonyum ve Laminate Kaplama"});
-            this.tedavirandevu.Location = new System.Drawing.Point(172, 281);
+            this.tedavirandevu.Location = new System.Drawing.Point(172, 271);
             this.tedavirandevu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tedavirandevu.Name = "tedavirandevu";
             this.tedavirandevu.Size = new System.Drawing.Size(199, 24);
@@ -296,11 +298,41 @@
             this.randevudata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.randevudata_CellClick);
             this.randevudata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.randevudata_CellContentClick);
             // 
+            // randevudr
+            // 
+            this.randevudr.FormattingEnabled = true;
+            this.randevudr.Items.AddRange(new object[] {
+            "09.00-10.00",
+            "10.00-11.00",
+            "11.00-12.00",
+            "13.00-14.00",
+            "14.00-15.00",
+            "15.00-16.00",
+            "16.00-17.00",
+            "17.00-18.00"});
+            this.randevudr.Location = new System.Drawing.Point(172, 433);
+            this.randevudr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.randevudr.Name = "randevudr";
+            this.randevudr.Size = new System.Drawing.Size(199, 24);
+            this.randevudr.TabIndex = 82;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(81, 433);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 25);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "Doktor :";
+            // 
             // randevu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 556);
+            this.Controls.Add(this.randevudr);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.randevudata);
             this.Controls.Add(this.tedavirandevu);
             this.Controls.Add(this.saatrandevu);
@@ -352,5 +384,7 @@
         private System.Windows.Forms.ComboBox saatrandevu;
         private System.Windows.Forms.ComboBox tedavirandevu;
         private System.Windows.Forms.DataGridView randevudata;
+        private System.Windows.Forms.ComboBox randevudr;
+        private System.Windows.Forms.Label label6;
     }
 }

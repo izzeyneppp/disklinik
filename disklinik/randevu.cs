@@ -14,6 +14,20 @@ namespace disklinik
     public partial class randevu : Form
     {
         ConnectionString mycon= new ConnectionString();
+        private void filldoktor()
+        {
+            SqlConnection baglanti = mycon.GetCon();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select doktorad from doktorkayit", baglanti);
+            SqlDataReader rdr;
+            rdr = komut.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("doktorad", typeof(string));
+            dt.Load(rdr);
+            randevudr.ValueMember = "doktorad";
+            randevudr.DataSource = dt;
+            baglanti.Close();
+        }
         private void fillhasta()
         {
             SqlConnection baglanti = mycon.GetCon();
@@ -70,6 +84,7 @@ namespace disklinik
             yenile();
             fillhasta();
             filltedavi();
+            filldoktor();
             
         }
 
@@ -94,6 +109,7 @@ namespace disklinik
             tarihrandevu.Text = "";
             saatrandevu.SelectedItem = "";
             randevuarama.Text = "";
+            randevudr.SelectedItem = "";
 
 
         }
@@ -106,9 +122,9 @@ namespace disklinik
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO randevu (ad_soyad, randevu_tedavi,randevu_tarih,randevu_saat) " +
+            string query = "INSERT INTO randevu (ad_soyad, randevu_tedavi,randevu_tarih,randevu_saat,randevu_doktor) " +
                       "VALUES ('" + adrandevu.SelectedItem.ToString() + "', '" + tedavirandevu.SelectedItem.ToString() + "', '" + tarihrandevu.Text + "', '" +
-                      saatrandevu.SelectedItem.ToString() + "' )";
+                      saatrandevu.SelectedItem.ToString() + "','"+randevudr.SelectedItem.ToString( )+"'";
             randevular ran = new randevular();
 
             try
@@ -148,7 +164,7 @@ namespace disklinik
                 try
                 {
 
-                    string query = "update randevu set ad_soyad='" + adrandevu.SelectedItem + "', randevu_tedavi='" + tedavirandevu.SelectedItem + "',randevu_tarih='" + tarihrandevu.Text + "',randevu_saat='" + saatrandevu.SelectedItem + "'  where randevu_id=" + key + "";
+                    string query = "update randevu set ad_soyad='" + adrandevu.SelectedItem + "', randevu_tedavi='" + tedavirandevu.SelectedItem + "',randevu_tarih='" + tarihrandevu.Text + "',randevu_saat='" + saatrandevu.SelectedItem + "',randevu_doktor='"+randevudr.SelectedItem+"'  where randevu_id=" + key + "";
                     ran.randevuguncelle(query);
                     MessageBox.Show("Randevu Başarıyla güncellendi");
                     uyeler();
@@ -195,7 +211,7 @@ namespace disklinik
             tedavirandevu.SelectedItem = randevudata.Rows[e.RowIndex].Cells[2].Value.ToString();
             tarihrandevu.Text = randevudata.Rows[e.RowIndex].Cells[3].Value.ToString();
             saatrandevu.SelectedItem = randevudata.Rows[e.RowIndex].Cells[4].Value.ToString();
-
+            randevudr.SelectedItem = randevudata.Rows[e.RowIndex].Cells[5].Value.ToString();
             if (adrandevu.Text == "")
             {
                 key = 0;
@@ -213,7 +229,7 @@ namespace disklinik
             tedavirandevu.SelectedItem = randevudata.Rows[e.RowIndex].Cells[2].Value.ToString();
             tarihrandevu.Text = randevudata.Rows[e.RowIndex].Cells[3].Value.ToString();
             saatrandevu.SelectedItem = randevudata.Rows[e.RowIndex].Cells[4].Value.ToString();
-
+            randevudr.SelectedItem = randevudata.Rows[e.RowIndex].Cells[5].Value.ToString();
             if (adrandevu.Text == "")
             {
                 key = 0;

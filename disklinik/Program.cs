@@ -16,7 +16,7 @@ namespace disklinik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new doktorkayit());
+            Application.Run(new Form1());
         }
     }
 }
