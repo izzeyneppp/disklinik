@@ -87,7 +87,7 @@ namespace disklinik
         private void button4_Click(object sender, EventArgs e)
         {
             string query = "INSERT INTO recete (hasta_adi_soyadi, fiyat_recete,ilac_recete,aciklama_recete) " +
-                        "VALUES ('" + recetead.SelectedItem.ToString() + "', '" + fiyatrecete.Text + "', '" + ilacad.Text + "', '" +
+                        "VALUES ('" + recetead.SelectedValue.ToString() + "', '" + fiyatrecete.Text + "', '" + ilacad.Text + "', '" +
                         aciklamarecete.Text + "')";
            receteler rec = new receteler();
 

@@ -123,10 +123,10 @@ namespace disklinik
         private void button4_Click(object sender, EventArgs e)
         {
             string query = "INSERT INTO randevu (ad_soyad, randevu_tedavi,randevu_tarih,randevu_saat,randevu_doktor) " +
-                      "VALUES ('" + adrandevu.SelectedItem.ToString() + "', '" + tedavirandevu.SelectedItem.ToString() + "', '" + tarihrandevu.Text + "', '" +
-                      saatrandevu.SelectedItem.ToString() + "','"+randevudr.SelectedItem.ToString( )+"'";
+                      "VALUES ('" + adrandevu.SelectedValue.ToString() + "', '" + tedavirandevu.SelectedValue.ToString() + "', '" + tarihrandevu.Text + "', '" +
+                      saatrandevu.SelectedItem.ToString() + "','"+randevudr.SelectedValue.ToString( )+"')";
             randevular ran = new randevular();
-
+            label7.Text= query;
             try
             {
                 ran.randevu_ekle(query);
@@ -244,5 +244,7 @@ namespace disklinik
         {
             filter();
         }
+
+
     }
 }
