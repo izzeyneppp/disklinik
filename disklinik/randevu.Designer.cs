@@ -51,7 +51,6 @@
             this.randevudata = new System.Windows.Forms.DataGridView();
             this.randevudr = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevudata)).BeginInit();
@@ -327,21 +326,11 @@
             this.label6.TabIndex = 81;
             this.label6.Text = "Doktor :";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 112);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
-            this.label7.TabIndex = 83;
-            this.label7.Text = "label7";
-            // 
             // randevu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 556);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.randevudr);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.randevudata);
@@ -397,6 +386,5 @@
         private System.Windows.Forms.DataGridView randevudata;
         private System.Windows.Forms.ComboBox randevudr;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
     }
 }

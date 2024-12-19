@@ -126,7 +126,7 @@ namespace disklinik
                       "VALUES ('" + adrandevu.SelectedValue.ToString() + "', '" + tedavirandevu.SelectedValue.ToString() + "', '" + tarihrandevu.Text + "', '" +
                       saatrandevu.SelectedItem.ToString() + "','"+randevudr.SelectedValue.ToString( )+"')";
             randevular ran = new randevular();
-            label7.Text= query;
+            
             try
             {
                 ran.randevu_ekle(query);
