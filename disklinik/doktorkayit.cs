@@ -46,6 +46,57 @@ namespace disklinik
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            // Doktor Adı Soyadı Kontrolü
+            if (string.IsNullOrWhiteSpace(doktorad.Text))
+            {
+                MessageBox.Show("Doktor Adı Soyadı alanı boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                doktorad.Focus();
+                return;
+            }
+
+            // Telefon numarasının içinde rakam olup olmadığı kontrolü
+            if (!doktortel.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Telefon numarasının içinde en az bir rakam bulunmalıdır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                doktortel.Focus();
+                return;
+            }
+
+            // Doğum Tarihi Seçimi Kontrolü
+            if (doktordg.Value == DateTimePicker.MinimumDateTime)
+            {
+                MessageBox.Show("Doğum Tarihi seçilmelidir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                doktordg.Focus();
+                return;
+            }
+
+            // Cinsiyet Seçimi Kontrolü
+            if (doktorcinsiyet.SelectedIndex == -1)
+            {
+                MessageBox.Show("Cinsiyet seçilmelidir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                doktorcinsiyet.Focus();
+                return;
+            }
+
+            // Branş Seçimi Kontrolü
+            if (string.IsNullOrWhiteSpace(doktorbrans.Text))
+            {
+                MessageBox.Show("Branş bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                doktorbrans.Focus();
+                return;
+            }
+
+            // Adres Bilgisi Kontrolü
+            if (string.IsNullOrWhiteSpace(doktoradres.Text))
+            {
+                MessageBox.Show("Adres bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                doktoradres.Focus();
+                return;
+            }
+
+
+
+
             string query = "INSERT INTO doktorkayit (doktorad, doktortel,doktordg,doktorcinsiyet,doktorbrans,doktoradres) " +
                        "VALUES ('" + doktorad.Text + "', '" + doktortel.Text + "', '" + doktordg.Text + "', '" +
                        doktorcinsiyet.SelectedItem.ToString() + "', '" + doktorbrans.Text + "', '" + doktoradres.Text + "')";
@@ -170,6 +221,15 @@ namespace disklinik
             anasayfa frmAnaSayfa = new anasayfa();
             frmAnaSayfa.Show();
             this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            anasayfa anasayfaForm = new anasayfa();
+            anasayfaForm.Show();
+
+            // Recete formunu kapatıyoruz.
+            this.Close();
         }
     }
 }

@@ -27,9 +27,12 @@ namespace disklinik
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
-            recete frmRecete = new recete();
-            frmRecete.Show();
+
+            // Recete formunu açıyoruz.
+            recete receteForm = new recete();
+            receteForm.Show();
+
+            // Ana sayfayı gizliyoruz, ama kapatmıyoruz.
             this.Hide();
         }
 
@@ -66,6 +69,16 @@ namespace disklinik
         {
             doktorkayit frmdoktorkayit = new doktorkayit();
             frmdoktorkayit.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Recete formunu açıyoruz.
+            AdminLogin AdminLogin = new AdminLogin();
+            AdminLogin.Show();
+
+            // Ana sayfayı gizliyoruz, ama kapatmıyoruz.
             this.Hide();
         }
     }

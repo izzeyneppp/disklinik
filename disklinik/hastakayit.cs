@@ -44,6 +44,44 @@ namespace disklinik
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(hastaadsoyad.Text))
+            {
+                MessageBox.Show("Hasta Adı Soyadı alanı boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                hastaadsoyad.Focus();
+                return;
+            }
+            if (!telefonHst.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Telefon numarasının içinde en az bir rakam bulunmalıdır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                telefonHst.Focus();
+                return;
+            }
+
+            if (doğumtarihihk.Value == DateTimePicker.MinimumDateTime)
+            {
+                MessageBox.Show("Doğum Tarihi seçilmelidir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                doğumtarihihk.Focus();
+                return;
+            }
+
+            if (cinsiyethk.SelectedIndex == -1)
+            {
+                MessageBox.Show("Cinsiyet seçilmelidir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cinsiyethk.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(alerjihk.Text))
+            {
+                MessageBox.Show("Alerji bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                alerjihk.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(adreshk.Text))
+            {
+                MessageBox.Show("Adres bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                adreshk.Focus();
+                return;
+            }
             string query = "INSERT INTO hastakayit (hasta_adi, hasta_telefon,hasta_adres,hasta_dg,hasta_cinsiyet,hasta_alerji) " +
                         "VALUES ('" + hastaadsoyad.Text + "', '" + telefonHst.Text + "', '" + adreshk.Text + "', '" +
                         doğumtarihihk.Text + "', '" + cinsiyethk.SelectedItem.ToString() + "', '" + alerjihk.Text + "')";
@@ -223,6 +261,16 @@ namespace disklinik
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Ana sayfa formunu yeniden açıyoruz.
+            anasayfa anasayfaForm = new anasayfa();
+            anasayfaForm.Show();
+
+            // Recete formunu kapatıyoruz.
+            this.Close();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace disklinik
         public SqlConnection GetCon()
         {
             SqlConnection baglanti = new SqlConnection();
-            baglanti.ConnectionString = "Data Source=DESKTOP-F695QET;Initial Catalog=disklinik;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            baglanti.ConnectionString = "Data Source=MRKZ-ODEMIRC-DZ\\SQLEXPRESS;Initial Catalog=disklinik;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 ;
             return baglanti;
         }

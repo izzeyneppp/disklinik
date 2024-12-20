@@ -51,6 +51,7 @@
             this.randevudata = new System.Windows.Forms.DataGridView();
             this.randevudr = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevudata)).BeginInit();
@@ -60,10 +61,10 @@
             // 
             this.button5.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button5.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(184, 498);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(138, 405);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 46);
+            this.button5.Size = new System.Drawing.Size(84, 37);
             this.button5.TabIndex = 75;
             this.button5.Text = "DÜZENLE";
             this.button5.UseVisualStyleBackColor = false;
@@ -73,10 +74,10 @@
             // 
             this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button4.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(19, 498);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(14, 405);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 46);
+            this.button4.Size = new System.Drawing.Size(84, 37);
             this.button4.TabIndex = 74;
             this.button4.Text = "KAYDET";
             this.button4.UseVisualStyleBackColor = false;
@@ -86,10 +87,10 @@
             // 
             this.button3.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(845, 137);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(634, 111);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 46);
+            this.button3.Size = new System.Drawing.Size(84, 37);
             this.button3.TabIndex = 73;
             this.button3.Text = "YENİLE";
             this.button3.UseVisualStyleBackColor = false;
@@ -98,10 +99,10 @@
             // randevuarama
             // 
             this.randevuarama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.randevuarama.Location = new System.Drawing.Point(576, 151);
-            this.randevuarama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.randevuarama.Location = new System.Drawing.Point(432, 123);
+            this.randevuarama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.randevuarama.Name = "randevuarama";
-            this.randevuarama.Size = new System.Drawing.Size(190, 22);
+            this.randevuarama.Size = new System.Drawing.Size(143, 20);
             this.randevuarama.TabIndex = 72;
             this.randevuarama.TextChanged += new System.EventHandler(this.randevuarama_TextChanged);
             // 
@@ -110,10 +111,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(955, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(716, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 30);
+            this.button1.Size = new System.Drawing.Size(21, 24);
             this.button1.TabIndex = 29;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -124,9 +124,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(269, 36);
+            this.label1.Location = new System.Drawing.Point(202, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(522, 37);
+            this.label1.Size = new System.Drawing.Size(416, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "DENTALAİD HASTA KAYIT SİSTEMİ";
             // 
@@ -134,10 +135,10 @@
             // 
             this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button6.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(349, 498);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Location = new System.Drawing.Point(262, 405);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 46);
+            this.button6.Size = new System.Drawing.Size(84, 37);
             this.button6.TabIndex = 76;
             this.button6.Text = "SİL";
             this.button6.UseVisualStyleBackColor = false;
@@ -145,19 +146,19 @@
             // 
             // tarihrandevu
             // 
-            this.tarihrandevu.Location = new System.Drawing.Point(172, 332);
-            this.tarihrandevu.Margin = new System.Windows.Forms.Padding(4);
+            this.tarihrandevu.Location = new System.Drawing.Point(129, 270);
             this.tarihrandevu.Name = "tarihrandevu";
-            this.tarihrandevu.Size = new System.Drawing.Size(199, 22);
+            this.tarihrandevu.Size = new System.Drawing.Size(150, 20);
             this.tarihrandevu.TabIndex = 65;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(103, 382);
+            this.label5.Location = new System.Drawing.Point(77, 310);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 25);
+            this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 61;
             this.label5.Text = "Saat :";
             // 
@@ -165,9 +166,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(98, 331);
+            this.label4.Location = new System.Drawing.Point(74, 269);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.Size = new System.Drawing.Size(60, 21);
             this.label4.TabIndex = 60;
             this.label4.Text = "Tarih :";
             // 
@@ -175,9 +177,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(85, 271);
+            this.label3.Location = new System.Drawing.Point(64, 220);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 25);
+            this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 59;
             this.label3.Text = "Tedavi :";
             // 
@@ -185,9 +188,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(57, 207);
+            this.label2.Location = new System.Drawing.Point(43, 168);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.Size = new System.Drawing.Size(93, 21);
             this.label2.TabIndex = 58;
             this.label2.Text = "Ad Soyad :";
             // 
@@ -195,23 +199,24 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(985, 110);
+            this.panel1.Size = new System.Drawing.Size(739, 89);
             this.panel1.TabIndex = 57;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::disklinik.Properties.Resources.VUSLAT_DENTAL__2_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(116, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -220,10 +225,10 @@
             // adrandevu
             // 
             this.adrandevu.FormattingEnabled = true;
-            this.adrandevu.Location = new System.Drawing.Point(172, 207);
-            this.adrandevu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.adrandevu.Location = new System.Drawing.Point(129, 168);
+            this.adrandevu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adrandevu.Name = "adrandevu";
-            this.adrandevu.Size = new System.Drawing.Size(199, 24);
+            this.adrandevu.Size = new System.Drawing.Size(150, 21);
             this.adrandevu.TabIndex = 77;
             // 
             // saatrandevu
@@ -238,10 +243,10 @@
             "15.00-16.00",
             "16.00-17.00",
             "17.00-18.00"});
-            this.saatrandevu.Location = new System.Drawing.Point(172, 382);
-            this.saatrandevu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saatrandevu.Location = new System.Drawing.Point(129, 310);
+            this.saatrandevu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saatrandevu.Name = "saatrandevu";
-            this.saatrandevu.Size = new System.Drawing.Size(199, 24);
+            this.saatrandevu.Size = new System.Drawing.Size(150, 21);
             this.saatrandevu.TabIndex = 78;
             // 
             // tedavirandevu
@@ -263,10 +268,10 @@
             "Pedodonti – Çocuk Diş Hekimliği",
             "Periodontoloji",
             "Zirkonyum ve Laminate Kaplama"});
-            this.tedavirandevu.Location = new System.Drawing.Point(172, 271);
-            this.tedavirandevu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tedavirandevu.Location = new System.Drawing.Point(129, 220);
+            this.tedavirandevu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tedavirandevu.Name = "tedavirandevu";
-            this.tedavirandevu.Size = new System.Drawing.Size(199, 24);
+            this.tedavirandevu.Size = new System.Drawing.Size(150, 21);
             this.tedavirandevu.TabIndex = 79;
             // 
             // randevudata
@@ -281,8 +286,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.randevudata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.randevudata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.randevudata.Location = new System.Drawing.Point(412, 200);
-            this.randevudata.Margin = new System.Windows.Forms.Padding(4);
+            this.randevudata.Location = new System.Drawing.Point(309, 162);
             this.randevudata.Name = "randevudata";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -293,7 +297,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.randevudata.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.randevudata.RowHeadersWidth = 51;
-            this.randevudata.Size = new System.Drawing.Size(545, 258);
+            this.randevudata.Size = new System.Drawing.Size(409, 210);
             this.randevudata.TabIndex = 80;
             this.randevudata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.randevudata_CellClick);
             this.randevudata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.randevudata_CellContentClick);
@@ -310,27 +314,38 @@
             "15.00-16.00",
             "16.00-17.00",
             "17.00-18.00"});
-            this.randevudr.Location = new System.Drawing.Point(172, 433);
-            this.randevudr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.randevudr.Location = new System.Drawing.Point(129, 352);
+            this.randevudr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.randevudr.Name = "randevudr";
-            this.randevudr.Size = new System.Drawing.Size(199, 24);
+            this.randevudr.Size = new System.Drawing.Size(150, 21);
             this.randevudr.TabIndex = 82;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(81, 433);
+            this.label6.Location = new System.Drawing.Point(61, 352);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 25);
+            this.label6.Size = new System.Drawing.Size(71, 21);
             this.label6.TabIndex = 81;
             this.label6.Text = "Doktor :";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(603, 61);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(136, 23);
+            this.button7.TabIndex = 83;
+            this.button7.Text = "ANASAYFA";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // randevu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 556);
+            this.ClientSize = new System.Drawing.Size(739, 452);
             this.Controls.Add(this.randevudr);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.randevudata);
@@ -350,7 +365,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "randevu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "randevu";
@@ -386,5 +401,6 @@
         private System.Windows.Forms.DataGridView randevudata;
         private System.Windows.Forms.ComboBox randevudr;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button7;
     }
 }

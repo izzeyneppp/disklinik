@@ -33,6 +33,32 @@ namespace disklinik
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+
+            // Tedavi Adı Kontrolü
+            if (string.IsNullOrWhiteSpace(tedaviadited.Text))
+            {
+                MessageBox.Show("Tedavi adı boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tedaviadited.Focus();
+                return;
+            }
+
+            // Fiyat Bilgisi Kontrolü
+            if (string.IsNullOrWhiteSpace(fiyatted.Text))
+            {
+                MessageBox.Show("Fiyat bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fiyatted.Focus();
+                return;
+            }
+
+            // Açıklama Kontrolü
+            if (string.IsNullOrWhiteSpace(açiklamated.Text))
+            {
+                MessageBox.Show("Açıklama boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                açiklamated.Focus();
+                return;
+            }
+
             string query = "INSERT INTO Tedavi (tedavi_ad, tedavi_fiyat, tedavi_aciklama) " +
                       "VALUES ('" + tedaviadited.Text + "', '" + fiyatted.Text + "', '" + açiklamated.Text + "')";
             tedaviler ted = new tedaviler();
@@ -51,6 +77,9 @@ namespace disklinik
                 yenile();
 
             }
+
+            uyeler();
+            yenile();
         }
         void uyeler()
         {
@@ -125,8 +154,9 @@ namespace disklinik
 
         private void button3_Click(object sender, EventArgs e)
         {
-            yenile();
             uyeler();
+            yenile();
+            
         }
         void filter()
         {
@@ -177,6 +207,16 @@ namespace disklinik
         private void tedaviarama_TextChanged(object sender, EventArgs e)
         {
             filter();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Ana sayfa formunu yeniden açıyoruz.
+            anasayfa anasayfaForm = new anasayfa();
+            anasayfaForm.Show();
+
+            // Recete formunu kapatıyoruz.
+            this.Close();
         }
     }
 }

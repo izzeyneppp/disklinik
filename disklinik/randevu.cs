@@ -122,7 +122,49 @@ namespace disklinik
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO randevu (ad_soyad, randevu_tedavi,randevu_tarih,randevu_saat,randevu_doktor) " +
+
+            // Adres Bilgisi Kontrolü
+            if (string.IsNullOrWhiteSpace(adrandevu.Text))
+            {
+                MessageBox.Show("Adres bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                adrandevu.Focus();
+                return;
+            }
+
+            // Tedavi Bilgisi Kontrolü
+            if (string.IsNullOrWhiteSpace(tedavirandevu.Text))
+            {
+                MessageBox.Show("Tedavi bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tedavirandevu.Focus();
+                return;
+            }
+
+            // Randevu Tarihi Seçimi Kontrolü
+            if (tarihrandevu.Value == DateTimePicker.MinimumDateTime)
+            {
+                MessageBox.Show("Randevu Tarihi seçilmelidir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tarihrandevu.Focus();
+                return;
+            }
+
+            // Randevu Saati Kontrolü
+            if (string.IsNullOrWhiteSpace(saatrandevu.Text))
+            {
+                MessageBox.Show("Randevu saati boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                saatrandevu.Focus();
+                return;
+            }
+
+            // Randevu Doktoru Seçimi Kontrolü
+            if (string.IsNullOrWhiteSpace(randevudr.Text))
+            {
+                MessageBox.Show("Randevu doktoru seçilmelidir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                randevudr.Focus();
+                return;
+            }
+
+
+             string query = "INSERT INTO randevu (ad_soyad, randevu_tedavi,randevu_tarih,randevu_saat,randevu_doktor) " +
                       "VALUES ('" + adrandevu.SelectedValue.ToString() + "', '" + tedavirandevu.SelectedValue.ToString() + "', '" + tarihrandevu.Text + "', '" +
                       saatrandevu.SelectedItem.ToString() + "','"+randevudr.SelectedValue.ToString( )+"')";
             randevular ran = new randevular();
@@ -245,6 +287,14 @@ namespace disklinik
             filter();
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Ana sayfa formunu yeniden açıyoruz.
+            anasayfa anasayfaForm = new anasayfa();
+            anasayfaForm.Show();
 
+            // Recete formunu kapatıyoruz.
+            this.Close();
+        }
     }
 }

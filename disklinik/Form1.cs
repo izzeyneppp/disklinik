@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,15 +16,15 @@ namespace disklinik
     {
         private const string CorrectUsername = "admin";
         private const string CorrectPassword = "12345678901";
-        private int attemptCount = 0; 
-        private const int MaxAttempts = 3; 
+        private int attemptCount = 0;
+        private const int MaxAttempts = 3;
 
         public Form1()
         {
             InitializeComponent();
         }
-       
-        
+
+
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -38,29 +39,43 @@ namespace disklinik
         {
 
 
-            
-                string username = kullanici_id.Text;
-                string password = sifre_giris.Text; 
 
-              
-                if (password.Length != 11)
-                {
-                    MessageBox.Show("Şifre 11 haneli olmalıdır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            string username = kullanici_id.Text;
+            string password = sifre_giris.Text;
 
-               
-                if (username == CorrectUsername && password == CorrectPassword)
+            // Şifre kontrolü
+            if (password.Length != 11)
+            {
+                MessageBox.Show("Şifre 11 haneli olmalıdır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Veritabanı bağlantısı ve doğrulama
+            try
+            {
+                ConnectionString connStr = new ConnectionString();
+                SqlConnection conn = connStr.GetCon();
+                conn.Open();
+
+                // Kullanıcı adı ve şifreyi sorgulama
+                string query = "SELECT COUNT(*) FROM giris WHERE kullnici_adi = @username AND sifre = @password";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                int result = (int)cmd.ExecuteScalar(); // Sadece 1 ya da 0 döndürür.
+
+                if (result > 0)
                 {
+                    // Giriş başarılı
                     MessageBox.Show("Hoşgeldiniz!", "Başarılı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                anasayfa anaSayfaFormu = new anasayfa();
-
-
-                anaSayfaFormu.Show();
-                this.Hide(); 
+                    anasayfa anaSayfaFormu = new anasayfa();
+                    anaSayfaFormu.Show();
+                    this.Hide();
                 }
                 else
                 {
+                    // Hatalı kullanıcı adı veya şifre
                     attemptCount++; // Deneme sayısını artır
                     if (attemptCount >= MaxAttempts)
                     {
@@ -72,6 +87,14 @@ namespace disklinik
                         MessageBox.Show($"Kullanıcı adı veya şifre hatalı! Kalan hakkınız: {MaxAttempts - attemptCount}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Veritabanı bağlantısı sırasında bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
+    
+
                
 
         }

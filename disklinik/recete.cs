@@ -86,6 +86,40 @@ namespace disklinik
         }
         private void button4_Click(object sender, EventArgs e)
         {
+
+
+            // Reçete Adı Kontrolü
+            if (string.IsNullOrWhiteSpace(recetead.Text))
+            {
+                MessageBox.Show("Ad boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                recetead.Focus();
+                return;
+            }
+
+            // İlacın Adı Kontrolü
+            if (string.IsNullOrWhiteSpace(ilacad.Text))
+            {
+                MessageBox.Show("İlacın adı boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ilacad.Focus();
+                return;
+            }
+
+            // Fiyat Bilgisi Kontrolü
+            if (string.IsNullOrWhiteSpace(fiyatrecete.Text))
+            {
+                MessageBox.Show("Fiyat bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fiyatrecete.Focus();
+                return;
+            }
+
+            // Açıklama Kontrolü
+            if (string.IsNullOrWhiteSpace(aciklamarecete.Text))
+            {
+                MessageBox.Show("Açıklama boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                aciklamarecete.Focus();
+                return;
+            }
+
             string query = "INSERT INTO recete (hasta_adi_soyadi, fiyat_recete,ilac_recete,aciklama_recete) " +
                         "VALUES ('" + recetead.SelectedValue.ToString() + "', '" + fiyatrecete.Text + "', '" + ilacad.Text + "', '" +
                         aciklamarecete.Text + "')";
@@ -204,6 +238,16 @@ namespace disklinik
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bitmap, 0, 0); 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Ana sayfa formunu yeniden açıyoruz.
+            anasayfa anasayfaForm = new anasayfa();
+            anasayfaForm.Show();
+
+            // Recete formunu kapatıyoruz.
+            this.Close();
         }
     }
 }
