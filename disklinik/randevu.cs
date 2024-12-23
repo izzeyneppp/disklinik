@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
 
 namespace disklinik
 {
@@ -41,7 +43,6 @@ namespace disklinik
             adrandevu.ValueMember = "hasta_adi";
             adrandevu.DataSource = dt;
             baglanti.Close();
-
 
         }
         private void filltedavi()
@@ -295,6 +296,43 @@ namespace disklinik
 
             // Recete formunu kapatıyoruz.
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Yandex SMTP bilgileri
+            string smtpServer = "smtp.yandex.com"; // Yandex SMTP sunucusu
+            int port = 587; // TLS portu (SSL yerine TLS kullanıyoruz)
+            string fromEmail = "hastanemail@yandex.com"; // Yandex e-posta adresiniz
+            string password = "rebeddewsigbhzeq"; // Yandex şifreniz
+            string toEmail = textBox1.Text; // Alıcı e-posta adresi
+            string subject = "Randevü Hatırlatma"; // E-posta konusu
+            string body = tarihrandevu.Text +" "+ saatrandevu.Text + "  Bu bir randevu hatırlatma e-postasıdır.   "+" "+ randevudr.Text +"   Doktorunuzun adıdır."; // E-posta içeriği
+
+            try
+            {
+                // SmtpClient ile mail gönderimi için ayarları yapıyoruz
+                using (SmtpClient smtp = new SmtpClient(smtpServer))
+                {
+                    smtp.Port = port;
+                    smtp.Credentials = new NetworkCredential(fromEmail, password); // Kullanıcı adı ve şifre
+                    smtp.EnableSsl = true; // SSL/TLS güvenliği aktif
+
+                    // MailMessage nesnesi oluşturuluyor
+                    MailMessage mail = new MailMessage(fromEmail, toEmail, subject, body);
+
+                    // Mail gönderimi
+                    smtp.Send(mail);
+
+                    // Mail gönderildikten sonra MessageBox ile başarı mesajı gösteriliyor
+                    MessageBox.Show("Mail başarıyla gönderildi!", "Başarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hata durumunda MessageBox ile hata mesajı gösteriliyor
+                MessageBox.Show("Mail gönderimi sırasında bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

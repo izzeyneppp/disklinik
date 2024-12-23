@@ -28,6 +28,8 @@ namespace disklinik
                 doğumtarihihk.Text= hastadata.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cinsiyethk.SelectedItem= hastadata.Rows[e.RowIndex].Cells[5].Value.ToString();
                 alerjihk.Text= hastadata.Rows[e.RowIndex].Cells[6].Value.ToString();
+            Email.Text = hastadata.Rows[e.RowIndex].Cells[7].Value.ToString();
+
             if (hastaadsoyad.Text == "")
             {
                 key = 0;
@@ -82,9 +84,15 @@ namespace disklinik
                 adreshk.Focus();
                 return;
             }
-            string query = "INSERT INTO hastakayit (hasta_adi, hasta_telefon,hasta_adres,hasta_dg,hasta_cinsiyet,hasta_alerji) " +
+            if (string.IsNullOrWhiteSpace(Email.Text))
+            {
+                MessageBox.Show("E-mail bilgisi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Email.Focus();
+                return;
+            }
+            string query = "INSERT INTO hastakayit (hasta_adi, hasta_telefon,hasta_adres,hasta_dg,hasta_cinsiyet,hasta_alerji,hasta_Eposta) " +
                         "VALUES ('" + hastaadsoyad.Text + "', '" + telefonHst.Text + "', '" + adreshk.Text + "', '" +
-                        doğumtarihihk.Text + "', '" + cinsiyethk.SelectedItem.ToString() + "', '" + alerjihk.Text + "')";
+                        doğumtarihihk.Text + "', '" + cinsiyethk.SelectedItem.ToString() + "', '" + alerjihk.Text + "', '" + Email.Text + "')";
             hastalar hst = new hastalar();
 
             try
@@ -134,6 +142,7 @@ namespace disklinik
             alerjihk.Text = "";
             adreshk.Text = "";
             hastaarama.Text = "";
+            Email.Text = "";
 
         }
 
@@ -216,7 +225,7 @@ namespace disklinik
                 try
                 {
 
-                    string query = "update hastakayit set hasta_adi='" + hastaadsoyad.Text + "', hasta_telefon='"+telefonHst.Text+"',hasta_adres='"+adreshk.Text+"',hasta_dg='"+doğumtarihihk.Text+"', hasta_cinsiyet= '"+cinsiyethk.SelectedItem.ToString()+"', hasta_alerji='"+alerjihk.Text+"'  where hasta_id=" + key + "";
+                    string query = "update hastakayit set hasta_adi='" + hastaadsoyad.Text + "', hasta_telefon='"+telefonHst.Text+"',hasta_adres='"+adreshk.Text+"',hasta_dg='"+doğumtarihihk.Text+"', hasta_cinsiyet= '"+cinsiyethk.SelectedItem.ToString()+"', hasta_alerji='"+alerjihk.Text+ "'  , hasta_alerji='"+Email.Text+"'  where hasta_id=" + key + "";
                     hst.hastasil(query);
                     MessageBox.Show("Hasta Başarıyla güncellendi");
                     uyeler();
@@ -240,6 +249,8 @@ namespace disklinik
             doğumtarihihk.Text = hastadata.Rows[e.RowIndex].Cells[4].Value.ToString();
             cinsiyethk.SelectedItem = hastadata.Rows[e.RowIndex].Cells[5].Value.ToString();
             alerjihk.Text = hastadata.Rows[e.RowIndex].Cells[6].Value.ToString();
+            Email.Text = hastadata.Rows[e.RowIndex].Cells[7].Value.ToString();
+
             if (hastaadsoyad.Text == "")
             {
                 key = 0;
