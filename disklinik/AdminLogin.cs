@@ -72,7 +72,7 @@ namespace disklinik
                 return;
             }
 
-            string connectionString = "Data Source=MRKZ-ODEMIRC-DZ\\SQLEXPRESS;Initial Catalog=disklinik;Integrated Security=True;";
+            string connectionString = "Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=disklinik;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = "INSERT INTO giris (kullnici_adi, sifre) VALUES (@kadi, @sifre)";
@@ -124,7 +124,7 @@ namespace disklinik
                 return;
             }
 
-            string connectionString = "Data Source=MRKZ-ODEMIRC-DZ\\SQLEXPRESS;Initial Catalog=disklinik;Integrated Security=True;";
+            string connectionString = "Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=disklinik;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 // Kullanıcı adı ile arama yapmak için sorgu
@@ -166,7 +166,7 @@ namespace disklinik
                 int selectedId = Convert.ToInt32(AdminDataGrid.SelectedRows[0].Cells["giris_id"].Value); // giris_id'nin sütun adı olduğunu varsayıyoruz
 
                 // Veritabanı bağlantısı
-                string connectionString = "Data Source=MRKZ-ODEMIRC-DZ\\SQLEXPRESS;Initial Catalog=disklinik;Integrated Security=True;";
+                string connectionString = "Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=disklinik;Integrated Security=True;";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {

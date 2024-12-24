@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace disklinik
@@ -32,9 +33,10 @@ namespace disklinik
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
+      
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -109,6 +111,26 @@ namespace disklinik
         public void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
