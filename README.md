@@ -28,7 +28,17 @@ Projenin temek işlemleri hasta kayıt/silme, doktor kayıt/silme, tedavi ekleme
     
     **Burada gördüğünüz her ekranda (yetkili kişi hariç) arama kısmı bulunmaktadır. Hasta adına göre arama yapılmakttadır,
     yenile kısmına basarak form içindeki alanları temizleyebilirsiz.**
-    
+
+
+HAZIRLAYANLAR: 
+
+ÖMER FARUK DEMİRCİ - SQL, BACKEND VE SUNUM,
+
+ZEYNEP GENGEÇ - SQL VE BACKEND,
+               
+DOĞUKAN KESAT - FRONTEND,
+               
+ BORAY KAPLAN - RAPOR VE SUNU DOSYASI
 
   
   
