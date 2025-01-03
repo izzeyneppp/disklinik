@@ -32,3 +32,7 @@ Projenin temek işlemleri hasta kayıt/silme, doktor kayıt/silme, tedavi ekleme
 
   
   
+
+
+https://github.com/user-attachments/assets/7223eb0c-a635-4b33-a4a0-c513e389bddd
+
